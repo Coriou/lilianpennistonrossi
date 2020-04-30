@@ -2,7 +2,6 @@ module.exports = {
 	siteMetadata: {
 		title: `Lilian Penniston-Rossi`,
 		description: ``,
-		siteUrl: `https://lilian.video`,
 		author: `@coriou`,
 	},
 	plugins: [
