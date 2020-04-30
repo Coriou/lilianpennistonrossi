@@ -39,7 +39,7 @@ export default ({
 			ratio: "16:9",
 			// autoplay: true,
 			youtube: {
-				noCookie: true,
+				noCookie: false,
 				rel: 0,
 				iv_load_policy: 3,
 				modestbranding: 1,
