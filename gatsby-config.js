@@ -28,7 +28,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Lilian-Penniston-Rossi`,
+				name: `Lilian Penniston-Rossi`,
+				icon: `static/icon.png`,
 				short_name: `Lilian Piano`,
 				start_url: `/`,
 				background_color: `#663399`,
