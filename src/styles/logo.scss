@@ -1,0 +1,34 @@
+.logo {
+	.text {
+		fill: rgba($body-color, 1);
+		stroke: rgba($body-color, 1);
+		stroke-width: 1px;
+		max-width: 100%;
+	}
+
+	.holly-leaf-center {
+		fill: darken($primary, 10%) !important;
+	}
+
+	.holly-leaf {
+		fill: $primary !important;
+	}
+
+	.holly-balls {
+		fill: $holly-red !important;
+	}
+}
+
+body.dark {
+	.logo {
+		.text {
+			fill: rgba($body-color-dark, 1);
+			stroke: rgba($body-color-dark, 1);
+			stroke-width: 0.25px;
+		}
+
+		.holly-leaf-center {
+			fill: darken($primary, 20%) !important;
+		}
+	}
+}

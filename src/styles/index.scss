@@ -1,0 +1,35 @@
+@import "_variables";
+@import "_mixins";
+// @import "~@blueprintjs/core/src/blueprint";
+@import "~bootstrap/scss/bootstrap";
+
+@import "typography";
+@import "video";
+@import "themeToggle";
+@import "logo";
+
+body,
+nav,
+.logo {
+	transition: background-color 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+body.dark {
+	background-color: $body-bg-dark;
+	color: $body-color-dark;
+
+	hr {
+		border-color: darken($primary, 0%);
+	}
+}
+
+a[href]:hover {
+	text-decoration: none;
+}
+
+.btn:hover {
+	a[href],
+	a[href]:hover {
+		color: inherit;
+	}
+}

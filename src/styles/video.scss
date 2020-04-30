@@ -1,0 +1,151 @@
+.video-wrapper {
+	position: relative;
+}
+
+.placeholder-16-9 {
+	height: 0;
+	overflow: hidden;
+	padding-top: 56.25%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	// background: white;
+}
+
+.player-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.video-info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+
+	// padding: 0.5em 1em;
+
+	color: white;
+	// text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+
+	h3 {
+		color: $primary;
+		// text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+		text-transform: uppercase;
+		color: $primary;
+	}
+	h6 {
+		color: lighten($primary, 10%);
+	}
+	p {
+	}
+
+	.video-info-readable {
+		height: 0;
+		opacity: 0;
+		transition: opacity 0.2s ease-in-out;
+		background-color: black;
+		background-color: rgba(black, 0.9);
+	}
+
+	&:hover {
+		background-color: rgba($primary, 0.6);
+
+		.video-info-readable {
+			height: auto;
+			opacity: 1;
+			padding: 0.5em 1em;
+		}
+	}
+}
+
+.video-details {
+}
+
+.video-meta {
+	font-size: 80%;
+	white-space: nowrap;
+	overflow-x: scroll;
+
+	li {
+		background-color: darken($light, 10%);
+		text-transform: capitalize;
+
+		b {
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			display: inline-block;
+			background-color: $primary;
+			font-weight: 400;
+			color: lighten($body-color, 10%);
+		}
+
+		span {
+			margin-left: -3px;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+			display: inline-block;
+			background-color: darken($light, 10%);
+		}
+	}
+}
+
+.video-play-button {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	// pointer-events: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.play-button-icon {
+		cursor: pointer;
+		pointer-events: all;
+		margin-right: 5px;
+		font-size: 16px;
+
+		.play-icon-triangle {
+			stroke: $primary !important;
+			stroke-width: 2 !important;
+		}
+
+		&:hover {
+			.play-icon-triangle {
+				stroke: #bababa !important;
+				fill: darken($body-bg-dark, 5%) !important;
+			}
+		}
+
+		@include respond-below(md) {
+			font-size: 12px;
+		}
+	}
+}
+
+body.dark {
+	.video-meta {
+		li {
+			background-color: darken($light, 50%);
+
+			b {
+				// background-color: $primary;
+				background-color: #0f6964;
+				color: $body-color-dark;
+			}
+
+			span {
+				background-color: darken($light, 50%);
+			}
+		}
+	}
+}

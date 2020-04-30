@@ -1,0 +1,13 @@
+.text-cursive {
+	font-family: $font-family-cursive;
+}
+
+pre {
+	color: lighten($body-color, 20%);
+}
+
+body.dark {
+	pre {
+		color: lighten($body-color-dark, 20%);
+	}
+}
