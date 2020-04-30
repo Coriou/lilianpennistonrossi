@@ -2,6 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: `Lilian Penniston-Rossi`,
 		description: ``,
+		siteUrl: `https://lilian.video`,
 		author: `@coriou`,
 	},
 	plugins: [
@@ -28,8 +29,9 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Lilian Penniston-Rossi`,
 				icon: `static/icon.png`,
+				start_url: `https://lilian.video`,
+				name: `Lilian Penniston-Rossi`,
 				short_name: `Lilian`,
 				background_color: `#079992`,
 				theme_color: `#079992`,
