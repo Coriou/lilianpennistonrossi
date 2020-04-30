@@ -30,10 +30,10 @@ module.exports = {
 			options: {
 				name: `Lilian Penniston-Rossi`,
 				icon: `static/icon.png`,
-				short_name: `Lilian Piano`,
+				short_name: `Lilian`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#079992`,
+				theme_color: `#079992`,
 				display: `minimal-ui`,
 			},
 		},
