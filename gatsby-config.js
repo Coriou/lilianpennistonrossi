@@ -39,8 +39,8 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `markdown-pages`,
-				path: `${__dirname}/src/md-pages`,
+				name: `video-pages`,
+				path: `${__dirname}/src/md-video-pages`,
 			},
 		},
 		`gatsby-transformer-remark`,
@@ -48,6 +48,14 @@ module.exports = {
 			resolve: `gatsby-plugin-netlify`,
 			options: {},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `mdx-pages`,
+				path: `${__dirname}/src/mdx-pages`,
+			},
+		},
+		`gatsby-plugin-mdx`,
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,

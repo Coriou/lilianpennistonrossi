@@ -3,15 +3,23 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+
 const IndexPage = ({ data }) => {
 	const {
-		markdownRemark: { html },
+		mdx: { body },
 	} = data
 
 	return (
 		<Layout>
 			<SEO title="Home" />
-			<div dangerouslySetInnerHTML={{ __html: html }} />
+
+			<article className="mt-4">
+				<MDXProvider className="mt-4">
+					<MDXRenderer>{body}</MDXRenderer>
+				</MDXProvider>
+			</article>
 		</Layout>
 	)
 }
@@ -20,8 +28,8 @@ export default IndexPage
 
 export const pageQuery = graphql`
 	query {
-		markdownRemark(frontmatter: { path: { eq: "/" } }) {
-			html
+		mdx(frontmatter: { path: { eq: "/" } }) {
+			body
 		}
 	}
 `

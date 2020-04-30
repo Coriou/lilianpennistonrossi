@@ -47,10 +47,7 @@ export default VideosPages
 
 export const pageQuery = graphql`
 	query {
-		allMarkdownRemark(
-			sort: { order: DESC, fields: [frontmatter___date] }
-			filter: { frontmatter: { isSpecial: { ne: true } } }
-		) {
+		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
 			edges {
 				node {
 					html
