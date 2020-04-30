@@ -1,7 +1,9 @@
 http://www.lilian.video/* https://lilian.video/:splat 301!
 http://www.lilianpennistonrossi.com/* https://lilian.video/:splat 301!
 http://lilianpennistonrossi.com/* https://lilian.video/:splat 301!
+http://lilian.netlify.app/* https://lilian.video/:splat 301!
 
 https://www.lilian.video/* https://lilian.video/:splat 301!
 https://www.lilianpennistonrossi.com/* https://lilian.video/:splat 301!
 https://lilianpennistonrossi.com/* https://lilian.video/:splat 301!
+https://lilian.netlify.app/* https://lilian.video/:splat 301!
