@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 
 import React, { useEffect, useRef } from "react"
-import Plyr from "plyr"
 import "../styles/plyr.scss"
 
 export default ({
@@ -53,38 +52,46 @@ export default ({
 	)
 	const checkPlay = useRef(null)
 
+	// Import Plyr dynamically
 	useEffect(() => {
-		if (!player.current) {
-			player.current = new Plyr(`#${elID}`, plyrOptions)
+		import("plyr")
+			.then(plyr => {
+				const Plyr = plyr.default
 
-			player.current.once("canplay", event => {
-				if (plyrOptions.autoplay) setTimeout(() => player.current.play(), 250)
+				if (!player.current) {
+					player.current = new Plyr(`#${elID}`, plyrOptions)
+
+					player.current.once("canplay", event => {
+						if (plyrOptions.autoplay)
+							setTimeout(() => player.current.play(), 250)
+					})
+
+					player.current.on("playing", event => {
+						if (!hasPlayed.current) hasPlayed.current = true
+						if (typeof onPlay === "function") onPlay(event)
+					})
+
+					player.current.on("play", event => {
+						if (!hasPlayed.current) hasPlayed.current = true
+						if (typeof onPlay === "function") onPlay(event)
+					})
+
+					player.current.on("pause", event => {
+						if (typeof onPause === "function") onPause(event)
+					})
+
+					player.current.once("ready", event => {
+						player.current.source = sources
+						if (typeof onReady === "function") onReady()
+					})
+				}
+
+				return () => {
+					// This seems overkill, not sure
+					// player.current.destroy()
+				}
 			})
-
-			player.current.on("playing", event => {
-				if (!hasPlayed.current) hasPlayed.current = true
-				if (typeof onPlay === "function") onPlay(event)
-			})
-
-			player.current.on("play", event => {
-				if (!hasPlayed.current) hasPlayed.current = true
-				if (typeof onPlay === "function") onPlay(event)
-			})
-
-			player.current.on("pause", event => {
-				if (typeof onPause === "function") onPause(event)
-			})
-
-			player.current.once("ready", event => {
-				player.current.source = sources
-				if (typeof onReady === "function") onReady()
-			})
-		}
-
-		return () => {
-			// This seems overkill, not sure
-			// player.current.destroy()
-		}
+			.catch(console.error)
 	}, [elID, plyrOptions, sources, onPause, onPlay, onReady, isDisplayed])
 
 	useEffect(() => {
