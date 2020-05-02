@@ -55,7 +55,7 @@ export const pageQuery = graphql`
 				id
 				featuredImage {
 					social: childImageSharp {
-						fixed(width: 1200, height: 628) {
+						fixed(width: 1200, height: 628, quality: 95) {
 							...GatsbyImageSharpFixed
 						}
 					}

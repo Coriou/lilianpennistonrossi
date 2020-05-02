@@ -3,6 +3,7 @@ module.exports = {
 		title: `Lilian Penniston-Rossi`,
 		description: ``,
 		author: `@coriou`,
+		url: "https://lilian.video",
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
