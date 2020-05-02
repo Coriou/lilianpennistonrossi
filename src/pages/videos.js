@@ -9,7 +9,9 @@ import VideoWrapper from "../components/videoWrapper"
 const VideoPages = ({ data }) => {
 	const {
 		allMarkdownRemark: { edges },
-		mdx: { featuredImage },
+		mdx: {
+			frontmatter: { featuredImage },
+		},
 	} = data
 
 	const videos = edges.map(e => e.node)
