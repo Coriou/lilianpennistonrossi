@@ -1,11 +1,12 @@
 ---
-title: "Fantaisie-Impromptue"
+title: "Prélude No. 4 Op. 28"
 author: "Frédéric Chopin"
-date: "2020-04-30"
-id: "Gus4dnQuiGk"
+date: "2020-05-02 00:59"
+id: "Win2-p2tVag"
 textAuthor: "Lilian Penniston-Rossi"
-meta: "difficulty,hard|duration,6:03|views,19"
-path: "/video/fantaisie-impromptue"
+meta: "difficulty,hard"
+path: "/video/prelude-number-4-opus-28"
+featuredImage: ../images/covers/2-prelude-number-4-opus-28.jpg
 ---
 
 Velit occaecat et do duis et. Reprehenderit amet incididunt do tempor. Ullamco sit elit sit culpa ea. Ad mollit id non do proident eiusmod ea non.

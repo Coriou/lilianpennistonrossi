@@ -1,81 +1,46 @@
-import React, { useState, useRef } from "react"
+import React from "react"
 import { navigate } from "gatsby"
+import Img from "gatsby-image"
 import Player from "./player"
 import PlayIcon from "../images/play-icon-holly.svg"
 
-export default ({ videoID, className, small, path }) => {
-	const hasAlreadyPlayed = useRef(false)
-	const [displayPlayer, setDisplayPlayer] = useState(false)
-	const [isPlaying, setIsPlaying] = useState(false)
-	const [isReady, setIsReady] = useState(false)
+export default ({ videoID, className, small, path, title, cover }) => {
+	const Cover = () => {
+		if (cover) return <Img fluid={cover} alt={title} />
 
-	const onPause = () => {
-		setIsPlaying(false)
+		return (
+			<img
+				src={`https://i3.ytimg.com/vi/${videoID}/maxresdefault.jpg`}
+				className="embed-responsive-item"
+				alt={title}
+			/>
+		)
 	}
 
-	const onPlay = () => {
-		setIsPlaying(true)
-		setDisplayPlayer(true)
-	}
+	if (small)
+		return (
+			<div
+				className={[
+					!cover ? "embed-responsive" : "",
+					!cover ? "embed-responsive-16by9" : "",
+					"video-thumbnail",
+					className,
+				].join(" ")}
+				onClick={() => navigate(path)}
+			>
+				<Cover />
 
-	const initialStart = () => {
-		if (!hasAlreadyPlayed.current) {
-			if (!displayPlayer) setDisplayPlayer(true)
-			setTimeout(() => setIsPlaying(true), 500)
-			hasAlreadyPlayed.current = true
-		} else {
-			setIsPlaying(true)
-		}
-	}
-
-	const defaultClass = ["video-wrapper"]
-	const wrapperClassName = Array.isArray(className)
-		? [...defaultClass, ...className].join(" ")
-		: [...defaultClass, className].join(" ")
-
-	return (
-		<>
-			<div className={wrapperClassName}>
-				<div
-					className="placeholder-16-9"
-					style={{
-						backgroundImage: `url('https://i3.ytimg.com/vi/${videoID}/maxresdefault.jpg')`,
-						cursor: small ? "pointer" : "inherit",
-					}}
-					onClick={() => {
-						if (small) navigate(path)
-					}}
-				/>
-
-				<div
-					className="video-play-button"
-					onClick={initialStart}
-					style={{
-						zIndex: isPlaying ? -1 : 2,
-						display: isReady && !isPlaying ? "flex" : "none",
-					}}
-				>
+				<div className="video-play-button" onClick={() => navigate(path)}>
 					<PlayIcon
 						height="5em"
 						width="5em"
 						className="play-button-icon"
 						alt="Play Button"
-						onClick={initialStart}
+						onClick={() => navigate(path)}
 					/>
 				</div>
-
-				{!small && (
-					<Player
-						isDisplayed={displayPlayer}
-						videoID={videoID}
-						style={{ zIndex: displayPlayer ? 1 : -1 }}
-						onPause={onPause}
-						onPlay={onPlay}
-						onReady={() => setIsReady(true)}
-						isPlaying={isPlaying}
-					/>
-				)}
 			</div>
-		</>
-	)
+		)
+
+	return <Player videoID={videoID} className={className} title={title} />
 }

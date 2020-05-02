@@ -1,72 +1,3 @@
-.video-wrapper {
-	position: relative;
-}
-
-.placeholder-16-9 {
-	height: 0;
-	overflow: hidden;
-	padding-top: 56.25%;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	// background: white;
-}
-
-.player-wrapper {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.video-info {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow: hidden;
-
-	// padding: 0.5em 1em;
-
-	color: white;
-	// text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-
-	h3 {
-		color: $primary;
-		// text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-		text-transform: uppercase;
-		color: $primary;
-	}
-	h6 {
-		color: lighten($primary, 10%);
-	}
-	p {
-	}
-
-	.video-info-readable {
-		height: 0;
-		opacity: 0;
-		transition: opacity 0.2s ease-in-out;
-		background-color: black;
-		background-color: rgba(black, 0.9);
-	}
-
-	&:hover {
-		background-color: rgba($primary, 0.6);
-
-		.video-info-readable {
-			height: auto;
-			opacity: 1;
-			padding: 0.5em 1em;
-		}
-	}
-}
-
-.video-details {
-}
-
 .video-meta {
 	font-size: 80%;
 	white-space: nowrap;
@@ -95,39 +26,48 @@
 	}
 }
 
-.video-play-button {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.video-thumbnail {
+	cursor: pointer;
 	overflow: hidden;
-	// pointer-events: none;
+	position: relative;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	border: 2px solid $primary;
+	border-radius: 2px;
 
-	.play-button-icon {
-		cursor: pointer;
-		pointer-events: all;
-		margin-right: 5px;
-		font-size: 16px;
+	.video-play-button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		// pointer-events: none;
 
-		.play-icon-triangle {
-			stroke: $primary !important;
-			stroke-width: 2 !important;
-		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-		&:hover {
+		.play-button-icon {
+			cursor: pointer;
+			pointer-events: all;
+			margin-right: 5px;
+			font-size: 16px;
+
 			.play-icon-triangle {
-				stroke: #bababa !important;
-				fill: darken($body-bg-dark, 5%) !important;
+				stroke: $primary !important;
+				stroke-width: 2 !important;
 			}
-		}
 
-		@include respond-below(md) {
-			font-size: 12px;
+			&:hover {
+				.play-icon-triangle {
+					stroke: #bababa !important;
+					fill: darken($body-bg-dark, 5%) !important;
+				}
+			}
+
+			@include respond-below(md) {
+				font-size: 12px;
+			}
 		}
 	}
 }

@@ -56,6 +56,13 @@ module.exports = {
 				path: `${__dirname}/src/mdx-pages`,
 			},
 		},
+		// {
+		// 	resolve: `gatsby-source-youtube-v2`,
+		// 	options: {
+		// 		channelId: [`UCdyIugDQol4mwsdcIWQUZCg`],
+		// 		apiKey: `AIzaSyCDAuRWU9k9TaI2Xnj4SKvJ4oLv6AOsLBs`,
+		// 	},
+		// },
 		`gatsby-plugin-mdx`,
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline

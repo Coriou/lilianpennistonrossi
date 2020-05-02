@@ -16,6 +16,15 @@ export default ({ data }) => {
 			<SEO
 				title={`${frontmatter.title} | ${frontmatter.author}`}
 				description={excerpt}
+				metaImage={
+					frontmatter.featuredImage
+						? {
+								height: frontmatter.featuredImage.social.fixed.height,
+								width: frontmatter.featuredImage.social.fixed.width,
+								url: frontmatter.featuredImage.social.fixed.src,
+						  }
+						: false
+				}
 			/>
 			<VideoWrapper
 				videoID={frontmatter.id}
@@ -37,13 +46,20 @@ export const pageQuery = graphql`
 			html
 			excerpt
 			frontmatter {
-				date(formatString: "DD-MM-YYYY")
+				date(formatString: "DD-MM-YYYY HH:MM")
 				title
 				author
 				textAuthor
 				path
 				meta
 				id
+				featuredImage {
+					social: childImageSharp {
+						fixed(width: 1200, height: 628) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
 			}
 		}
 	}

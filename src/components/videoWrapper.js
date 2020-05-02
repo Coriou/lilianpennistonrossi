@@ -12,11 +12,20 @@ export default ({
 	author,
 	excerpt,
 	path,
+	cover,
 }) => {
 	return (
 		<article className="pt-4 pb-4">
-			<Video videoID={videoID} className="mb-2" small={small} path={path} />
+			<Video
+				videoID={videoID}
+				className="mb-2"
+				small={small}
+				path={path}
+				title={title}
+				cover={cover}
+			/>
 			<VideoInfo
+				videoID={videoID}
 				path={path}
 				small={small}
 				title={title}
