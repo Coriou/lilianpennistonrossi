@@ -8,14 +8,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const IndexPage = ({ data }) => {
 	const {
-		mdx: { body },
-		frontmatter,
+		mdx: { body, frontmatter },
 	} = data
 
 	return (
 		<Layout>
 			<SEO
 				title="Home"
+				description="A website to share my piano playing videos"
 				metaImage={
 					frontmatter.featuredImage
 						? {

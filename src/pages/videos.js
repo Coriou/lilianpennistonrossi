@@ -7,8 +7,6 @@ import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
 
 const VideoPages = ({ data }) => {
-	console.log(data)
-
 	const {
 		allMarkdownRemark: { edges },
 		mdx: { featuredImage },
