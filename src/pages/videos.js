@@ -6,9 +6,12 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
 
-const VideosPages = ({ data }) => {
+const VideoPages = ({ data }) => {
+	console.log(data)
+
 	const {
 		allMarkdownRemark: { edges },
+		mdx: { featuredImage },
 	} = data
 
 	const videos = edges.map(e => e.node)
@@ -44,7 +47,19 @@ const VideosPages = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO title="Videos" />
+			<SEO
+				title="Videos"
+				description="Some videos of me playing the piano"
+				metaImage={
+					featuredImage
+						? {
+								height: featuredImage.social.fixed.height,
+								width: featuredImage.social.fixed.width,
+								url: featuredImage.social.fixed.src,
+						  }
+						: false
+				}
+			/>
 			<Row>
 				<Videos />
 			</Row>
@@ -52,7 +67,7 @@ const VideosPages = ({ data }) => {
 	)
 }
 
-export default VideosPages
+export default VideoPages
 
 export const pageQuery = graphql`
 	query {
@@ -79,6 +94,18 @@ export const pageQuery = graphql`
 				}
 			}
 			totalCount
+		}
+
+		mdx(frontmatter: { path: { eq: "/" } }) {
+			frontmatter {
+				featuredImage {
+					social: childImageSharp {
+						fixed(width: 1200, height: 628, quality: 95) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
+			}
 		}
 	}
 `
