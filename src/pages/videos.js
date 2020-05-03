@@ -9,9 +9,6 @@ import VideoWrapper from "../components/videoWrapper"
 const VideoPages = ({ data }) => {
 	const {
 		allMarkdownRemark: { edges },
-		mdx: {
-			frontmatter: { featuredImage },
-		},
 	} = data
 
 	const videos = edges.map(e => e.node)
@@ -47,19 +44,7 @@ const VideoPages = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO
-				title="Videos"
-				description="Some videos of me playing the piano"
-				metaImage={
-					featuredImage
-						? {
-								height: featuredImage.social.fixed.height,
-								width: featuredImage.social.fixed.width,
-								url: featuredImage.social.fixed.src,
-						  }
-						: false
-				}
-			/>
+			<SEO title="Videos" description="Some videos of me playing the piano" />
 			<Row>
 				<Videos />
 			</Row>
@@ -94,18 +79,6 @@ export const pageQuery = graphql`
 				}
 			}
 			totalCount
-		}
-
-		mdx(frontmatter: { path: { eq: "/" } }) {
-			frontmatter {
-				featuredImage {
-					social: childImageSharp {
-						fixed(width: 1200, height: 628, quality: 95) {
-							...GatsbyImageSharpFixed
-						}
-					}
-				}
-			}
 		}
 	}
 `

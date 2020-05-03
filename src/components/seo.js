@@ -1,17 +1,13 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title, metaImage = false, image }) {
-	const { site } = useStaticQuery(
+	const {
+		site,
+		allFile: { edges },
+	} = useStaticQuery(
 		graphql`
 			query {
 				site {
@@ -22,11 +18,33 @@ function SEO({ description, lang, meta, title, metaImage = false, image }) {
 						url
 					}
 				}
+
+				allFile(
+					filter: { name: { eq: "mainCover" }, extension: { eq: "jpg" } }
+				) {
+					edges {
+						node {
+							social: childImageSharp {
+								fixed(width: 1200, height: 628, quality: 100) {
+									...GatsbyImageSharpFixed
+								}
+							}
+						}
+					}
+				}
 			}
 		`
 	)
 
 	const metaDescription = description || site.siteMetadata.description
+
+	try {
+		if (!metaImage) {
+			metaImage = edges[0].node.social.fixed
+		}
+	} catch (err) {
+		console.error(err)
+	}
 
 	return (
 		<Helmet
@@ -70,7 +88,7 @@ function SEO({ description, lang, meta, title, metaImage = false, image }) {
 						? [
 								{
 									property: "og:image",
-									content: `${site.siteMetadata.url}${metaImage.url}`,
+									content: `${site.siteMetadata.url}${metaImage.src}`,
 								},
 								{
 									property: "og:image:width",
@@ -85,12 +103,7 @@ function SEO({ description, lang, meta, title, metaImage = false, image }) {
 									content: "summary_large_image",
 								},
 						  ]
-						: [
-								{
-									name: "twitter:card",
-									content: "summary",
-								},
-						  ]
+						: []
 				)
 				.concat(meta)}
 		/>

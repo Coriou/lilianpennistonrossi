@@ -18,11 +18,7 @@ export default ({ data }) => {
 				description={excerpt}
 				metaImage={
 					frontmatter.featuredImage
-						? {
-								height: frontmatter.featuredImage.social.fixed.height,
-								width: frontmatter.featuredImage.social.fixed.width,
-								url: frontmatter.featuredImage.social.fixed.src,
-						  }
+						? frontmatter.featuredImage.social.fixed
 						: false
 				}
 			/>

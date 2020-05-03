@@ -8,24 +8,12 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const IndexPage = ({ data }) => {
 	const {
-		mdx: { body, frontmatter },
+		mdx: { body },
 	} = data
 
 	return (
 		<Layout>
-			<SEO
-				title="Home"
-				description="A website to share my piano playing videos"
-				metaImage={
-					frontmatter.featuredImage
-						? {
-								height: frontmatter.featuredImage.social.fixed.height,
-								width: frontmatter.featuredImage.social.fixed.width,
-								url: frontmatter.featuredImage.social.fixed.src,
-						  }
-						: false
-				}
-			/>
+			<SEO title="Home" />
 
 			<article className="mt-4">
 				<MDXProvider className="mt-4">
@@ -42,15 +30,6 @@ export const pageQuery = graphql`
 	query {
 		mdx(frontmatter: { path: { eq: "/" } }) {
 			body
-			frontmatter {
-				featuredImage {
-					social: childImageSharp {
-						fixed(width: 1200, height: 628, quality: 95) {
-							...GatsbyImageSharpFixed
-						}
-					}
-				}
-			}
 		}
 	}
 `
