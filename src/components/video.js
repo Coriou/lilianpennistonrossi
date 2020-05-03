@@ -2,7 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 import Img from "gatsby-image"
 import Player from "./player"
-import PlayIcon from "../images/play-icon-holly.svg"
+// import PlayIcon from "../images/play-icon-holly.svg"
 
 export default ({ videoID, className, small, path, title, cover }) => {
 	const Cover = () => {
@@ -30,7 +30,7 @@ export default ({ videoID, className, small, path, title, cover }) => {
 			>
 				<Cover />
 
-				<div className="video-play-button" onClick={() => navigate(path)}>
+				{/* <div className="video-play-button" onClick={() => navigate(path)}>
 					<PlayIcon
 						height="5em"
 						width="5em"
@@ -38,7 +38,7 @@ export default ({ videoID, className, small, path, title, cover }) => {
 						alt="Play Button"
 						onClick={() => navigate(path)}
 					/>
-				</div>
+				</div> */}
 			</div>
 		)
 
