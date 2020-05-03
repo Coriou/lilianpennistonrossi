@@ -5,6 +5,7 @@ import { GiMusicalScore } from "react-icons/gi"
 import { FiPlay } from "react-icons/fi"
 import { thousandSeparator, parseDuration } from "../utils"
 import PDFModal from "./pdfModal"
+import slugify from "slugify"
 
 export default ({
 	videoID,
@@ -132,6 +133,17 @@ export default ({
 
 		const toggle = () => setShow(!show)
 
+		const forceDownload = () => {
+			// If it's Safari
+			if (typeof navigator !== "undefined" && navigator.userAgent)
+				return (
+					navigator.userAgent.match(/Safari/gi) &&
+					!navigator.userAgent.match(/Chrome/gi)
+				)
+
+			return false
+		}
+
 		return (
 			<div className="d-flex flex-column justify-items-center align-items-center">
 				<hr className="w-50 mt-4 mb-4" />
@@ -141,6 +153,8 @@ export default ({
 					className="btn-iconed w-25 text-white"
 					block
 					onClick={toggle}
+					href={forceDownload() ? partition : null}
+					download={forceDownload() ? `${slugify(title)}.pdf` : false}
 				>
 					<span className="btn-icon">
 						<GiMusicalScore />
@@ -148,12 +162,14 @@ export default ({
 					<span className="btn-text">Sheet music</span>
 				</Button>
 
-				<PDFModal
-					partition={partition}
-					active={show}
-					setter={setShow}
-					title={title}
-				/>
+				{!forceDownload() && (
+					<PDFModal
+						partition={partition}
+						active={show}
+						setter={setShow}
+						title={title}
+					/>
+				)}
 			</div>
 		)
 	}
