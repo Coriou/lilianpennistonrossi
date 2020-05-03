@@ -25,8 +25,6 @@ export const parseDuration = duration => {
 			.match(durationRegex)
 			.map(m => String(parseInt(m)).padStart(2, 0))
 
-		// console.log()
-
 		return `${minutes}:${seconds}`
 	} catch (err) {
 		console.error(err)
