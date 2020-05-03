@@ -1,4 +1,11 @@
 .logo {
+	max-width: 286px;
+	height: auto;
+
+	@include respond-below(md) {
+		max-width: 100px;
+	}
+
 	.text {
 		fill: rgba($body-color, 1);
 		stroke: rgba($body-color, 1);
