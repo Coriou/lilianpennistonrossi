@@ -49,7 +49,7 @@ const Header = ({ siteTitle }) => {
 								>
 									<Nav navbar>
 										<NavItem>
-											<NavLink to="/videos" tag={Link}>
+											<NavLink to="/v" tag={Link}>
 												Videos
 											</NavLink>
 										</NavItem>

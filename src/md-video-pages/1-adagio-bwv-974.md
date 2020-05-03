@@ -5,7 +5,7 @@ date: "2020-05-02 01:00"
 id: "pDfv4xvYnRw"
 textAuthor: "Lilian"
 meta: "difficulty,easy"
-path: "/video/adagio-bwv-974"
+path: "/v/adagio-bwv-974"
 featuredImage: ../images/covers/1-adagio-bwv-974.jpg
 ---
 

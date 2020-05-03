@@ -4,7 +4,7 @@ author: "Frédéric Chopin"
 date: "2020-05-02 00:59"
 id: "Win2-p2tVag"
 meta: "difficulty,hard"
-path: "/video/prelude-number-4-opus-28"
+path: "/v/prelude-number-4-opus-28"
 featuredImage: ../images/covers/2-prelude-number-4-opus-28.jpg
 ---
 

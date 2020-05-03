@@ -4,7 +4,7 @@ author: "Ludwig van Beethoven"
 date: "2020-05-02 00:53"
 id: "j6v2Gq9yNrQ"
 meta: "difficulty,hard"
-path: "/video/sonate-clair-de-lune-1er-mouvement"
+path: "/v/sonate-clair-de-lune-1er-mouvement"
 featuredImage: ../images/covers/8-sonate-clair-de-lune-1er-mouvement.jpg
 ---
 

@@ -4,7 +4,7 @@ author: "Frédéric Chopin"
 date: "2020-05-02 00:55"
 id: "2ObTvvsKShc"
 meta: "difficulty,hard"
-path: "/video/prelude-tolling-bells"
+path: "/v/prelude-tolling-bells"
 featuredImage: ../images/covers/5-prelude-tolling-bells.jpg
 ---
 

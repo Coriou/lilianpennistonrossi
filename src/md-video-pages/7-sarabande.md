@@ -4,7 +4,7 @@ author: "Georg Friedrich Haendel"
 date: "2020-05-02 00:54"
 id: "9ONFsA9IDN0"
 meta: "difficulty,hard"
-path: "/video/sarabande"
+path: "/v/sarabande"
 featuredImage: ../images/covers/7-sarabande.jpg
 ---
 

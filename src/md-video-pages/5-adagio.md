@@ -4,7 +4,7 @@ author: "Tomaso Albinoni"
 date: "2020-05-02 00:56"
 id: "07j7YiTZ1j4"
 meta: "difficulty,hard"
-path: "/video/adagio"
+path: "/v/adagio"
 featuredImage: ../images/covers/5-adagio.jpg
 ---
 

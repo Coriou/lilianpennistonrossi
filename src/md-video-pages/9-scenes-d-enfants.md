@@ -4,7 +4,7 @@ author: "Robert Schumann"
 date: "2020-05-02 00:52"
 id: "JSubNClnkNM"
 meta: "difficulty,hard"
-path: "/video/scenes-d-enfants"
+path: "/v/scenes-d-enfants"
 featuredImage: ../images/covers/9-scenes-d-enfants.jpg
 ---
 

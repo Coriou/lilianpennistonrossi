@@ -4,7 +4,7 @@ author: "Robert Schumann"
 date: "2020-05-02 00:57"
 id: "OnzMscGUnPU"
 meta: "difficulty,hard"
-path: "/video/reverie"
+path: "/v/reverie"
 featuredImage: ../images/covers/4-reverie.jpg
 ---
 

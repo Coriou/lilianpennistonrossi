@@ -4,7 +4,7 @@ author: "Frédéric Chopin"
 date: "2020-05-02 00:50"
 id: "fpL4YV-ljfM"
 meta: "difficulty,hard"
-path: "/video/fantaisie-impromptu"
+path: "/v/fantaisie-impromptu"
 featuredImage: ../images/covers/11-fantaisie-impromptu.jpg
 ---
 

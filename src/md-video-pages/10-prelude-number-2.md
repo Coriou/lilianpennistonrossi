@@ -4,7 +4,7 @@ author: "Johann Sebastian Bach"
 date: "2020-05-02 00:51"
 id: "pylMR0vusGc"
 meta: "difficulty,hard"
-path: "/video/prelude-number-2"
+path: "/v/prelude-number-2"
 featuredImage: ../images/covers/10-prelude-number-2.jpg
 ---
 
