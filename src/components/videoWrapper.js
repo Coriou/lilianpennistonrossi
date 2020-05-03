@@ -18,7 +18,7 @@ export default ({
 		<article className="pt-4 pb-4">
 			<Video
 				videoID={videoID}
-				className="mb-2"
+				className="mb-4"
 				small={small}
 				path={path}
 				title={title}

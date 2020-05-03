@@ -3,7 +3,6 @@ title: "Prélude No. 2"
 author: "Johann Sebastian Bach"
 date: "2020-05-02 00:51"
 id: "pylMR0vusGc"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/prelude-number-2"
 featuredImage: ../images/covers/10-prelude-number-2.jpg

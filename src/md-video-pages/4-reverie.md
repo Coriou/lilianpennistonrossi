@@ -3,7 +3,6 @@ title: "Rêverie"
 author: "Robert Schumann"
 date: "2020-05-02 00:57"
 id: "OnzMscGUnPU"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/reverie"
 featuredImage: ../images/covers/4-reverie.jpg

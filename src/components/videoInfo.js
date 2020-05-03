@@ -87,11 +87,7 @@ export default ({
 		const Author = () => {
 			if (small) return null
 
-			return (
-				<p className="text-muted text-cursive">
-					- {author || "Lilian Penniston Rossi"}
-				</p>
-			)
+			return <p className="text-primary text-cursive">- {author || "Lilian"}</p>
 		}
 
 		const Go = () => {
@@ -108,7 +104,7 @@ export default ({
 
 		return (
 			<>
-				{!small && <hr className="w-50" />}
+				{!small && <hr className="w-50 mt-4 mb-4" />}
 
 				<div
 					className="video-description"
@@ -123,9 +119,7 @@ export default ({
 	return (
 		<div className="video-details">
 			<Link to={path}>
-				<h3 className="mb-0 font-weight-light text-primary text-capitalize">
-					{title}
-				</h3>
+				<h3 className="mb-0 text-primary text-capitalize">{title}</h3>
 			</Link>
 
 			<h6 className="mt-0 text-muted text-uppercase font-weight-normal">

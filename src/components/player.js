@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/plyr.scss"
 
 export default ({ videoID, className, title }) => {
 	return (
@@ -7,7 +6,7 @@ export default ({ videoID, className, title }) => {
 			className={[
 				"embed-responsive",
 				"embed-responsive-16by9",
-				"video-thumbnail",
+				"video-player",
 				className,
 			].join(" ")}
 		>

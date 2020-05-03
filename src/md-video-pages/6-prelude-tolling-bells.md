@@ -3,7 +3,6 @@ title: 'Prélude "Tolling Bells"'
 author: "Frédéric Chopin"
 date: "2020-05-02 00:55"
 id: "2ObTvvsKShc"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/prelude-tolling-bells"
 featuredImage: ../images/covers/5-prelude-tolling-bells.jpg

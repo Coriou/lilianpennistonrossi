@@ -3,7 +3,6 @@ title: "Sarabande"
 author: "Georg Friedrich Haendel"
 date: "2020-05-02 00:54"
 id: "9ONFsA9IDN0"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/sarabande"
 featuredImage: ../images/covers/7-sarabande.jpg

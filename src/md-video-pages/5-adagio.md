@@ -3,7 +3,6 @@ title: "Adagio"
 author: "Tomaso Albinoni"
 date: "2020-05-02 00:56"
 id: "07j7YiTZ1j4"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/adagio"
 featuredImage: ../images/covers/5-adagio.jpg

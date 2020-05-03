@@ -8,12 +8,14 @@
 		text-transform: capitalize;
 
 		b {
+			border-radius: 0 20px 20px 0;
 			padding-left: 0.5em;
-			padding-right: 0.5em;
+			padding-right: 1em;
 			display: inline-block;
 			background-color: $primary;
 			font-weight: 400;
-			color: lighten($body-color, 10%);
+			text-transform: uppercase;
+			color: $white;
 		}
 
 		span {
@@ -26,13 +28,19 @@
 	}
 }
 
-.video-thumbnail {
+.video-thumbnail,
+.video-player {
 	cursor: pointer;
 	overflow: hidden;
 	position: relative;
 
+	transition: border 0.2s ease-in-out;
 	border: 2px solid $primary;
 	border-radius: 2px;
+
+	&:hover {
+		border-color: #bababa;
+	}
 
 	.video-play-button {
 		position: absolute;
@@ -81,6 +89,7 @@ body.dark {
 				// background-color: $primary;
 				background-color: #0f6964;
 				color: $body-color-dark;
+				font-weight: 500;
 			}
 
 			span {

@@ -3,7 +3,6 @@ title: "Concerto en sol majeur - Adagio assai"
 author: "Maurice Ravel"
 date: "2020-05-02 00:58"
 id: "z64gsfvHOWE"
-textAuthor: "Lilian Penniston-Rossi"
 meta: "difficulty,hard"
 path: "/video/concerto-en-sol-majeur-adagio-assai"
 featuredImage: ../images/covers/3-concerto-en-sol-majeur-adagio-assai.jpg
