@@ -6,6 +6,7 @@ id: "Win2-p2tVag"
 meta: "difficulty,hard"
 path: "/v/prelude-number-4-opus-28"
 featuredImage: ../images/covers/2-prelude-number-4-opus-28.jpg
+partition: ../partitions/2-prelude-number-4-opus-28.pdf
 ---
 
 Velit occaecat et do duis et. Reprehenderit amet incididunt do tempor. Ullamco sit elit sit culpa ea. Ad mollit id non do proident eiusmod ea non.

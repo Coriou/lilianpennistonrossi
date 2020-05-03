@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { Link, navigate } from "gatsby"
 import { Button } from "reactstrap"
+import { GiMusicalScore } from "react-icons/gi"
 import { FiPlay } from "react-icons/fi"
 import { thousandSeparator, parseDuration } from "../utils"
+import PDFModal from "./pdfModal"
 
 export default ({
 	videoID,
@@ -13,6 +15,7 @@ export default ({
 	small,
 	author,
 	excerpt,
+	partition,
 	path,
 }) => {
 	const [views, setViews] = useState("-")
@@ -123,6 +126,39 @@ export default ({
 		)
 	}
 
+	const Partition = () => {
+		const [show, setShow] = useState(false)
+
+		if (small || !partition) return null
+
+		const toggle = () => setShow(!show)
+
+		return (
+			<div className="d-flex flex-column justify-items-center align-items-center">
+				<hr className="w-50 mt-4 mb-4" />
+
+				<Button
+					color="primary"
+					className="btn-iconed w-25 text-white"
+					block
+					onClick={toggle}
+				>
+					<span className="btn-icon">
+						<GiMusicalScore />
+					</span>
+					<span className="btn-text">Sheet music</span>
+				</Button>
+
+				<PDFModal
+					partition={partition}
+					active={show}
+					setter={setShow}
+					title={title}
+				/>
+			</div>
+		)
+	}
+
 	return (
 		<div className="video-details">
 			<Link to={path}>
@@ -136,6 +172,8 @@ export default ({
 			<Meta />
 
 			<Details />
+
+			<Partition />
 		</div>
 	)
 }

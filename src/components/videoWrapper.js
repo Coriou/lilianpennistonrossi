@@ -13,6 +13,7 @@ export default ({
 	excerpt,
 	path,
 	cover,
+	partition,
 }) => {
 	return (
 		<article className="pt-4 pb-4">
@@ -34,6 +35,7 @@ export default ({
 				excerpt={excerpt}
 				meta={meta}
 				author={author}
+				partition={partition}
 			/>
 		</article>
 	)

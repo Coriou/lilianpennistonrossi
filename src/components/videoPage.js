@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
 
 export default ({ data }) => {
-	const { markdownRemark } = data
+	const { markdownRemark, site } = data
 	const { frontmatter, html, excerpt } = markdownRemark
 
 	const videoMeta = frontmatter.meta.split("|").map(meta => meta.split(","))
@@ -34,6 +34,11 @@ export default ({ data }) => {
 				cover={
 					frontmatter.featuredImage
 						? frontmatter.featuredImage.cover.fluid
+						: false
+				}
+				partition={
+					frontmatter.partition
+						? `${site.siteMetadata.url}${frontmatter.partition.publicURL}`
 						: false
 				}
 			/>
@@ -66,6 +71,15 @@ export const pageQuery = graphql`
 						}
 					}
 				}
+				partition {
+					publicURL
+				}
+			}
+		}
+
+		site {
+			siteMetadata {
+				url
 			}
 		}
 	}

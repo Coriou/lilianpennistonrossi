@@ -48,6 +48,13 @@ module.exports = {
 				path: `${__dirname}/src/md-video-pages`,
 			},
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `partitions`,
+				path: `${__dirname}/src/partitions`,
+			},
+		},
 		`gatsby-transformer-remark`,
 		{
 			resolve: `gatsby-plugin-netlify`,

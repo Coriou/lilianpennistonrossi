@@ -24,7 +24,10 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-icons": "^3.10.0",
-    "reactstrap": "^8.4.1"
+    "react-pdf": "^4.1.0",
+    "react-resize-aware": "^3.0.0",
+    "reactstrap": "^8.4.1",
+    "slugify": "^1.4.0"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",

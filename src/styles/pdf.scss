@@ -1,0 +1,39 @@
+.pdf-viewer {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+
+	.pdf-element {
+		max-width: 100%;
+	}
+
+	.pdf-controls {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+
+		.btn {
+			color: $white !important;
+
+			&:hover {
+				border-radius: 0 !important;
+			}
+		}
+	}
+}
+
+.react-pdf__Page__canvas {
+	display: inline;
+	margin: 0 auto;
+}
+
+.pdf-credits {
+	font-size: 80%;
+}
+
+.pdf-title {
+	font-size: 80%;
+}

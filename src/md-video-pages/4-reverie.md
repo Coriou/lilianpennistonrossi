@@ -6,6 +6,7 @@ id: "OnzMscGUnPU"
 meta: "difficulty,hard"
 path: "/v/reverie"
 featuredImage: ../images/covers/4-reverie.jpg
+partition: ../partitions/4-reverie.pdf
 ---
 
 Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.

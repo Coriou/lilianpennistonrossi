@@ -1,0 +1,17 @@
+.modal-content {
+	background-color: $body-bg;
+	color: $body-color;
+}
+
+body.dark {
+	.modal-content {
+		background-color: $body-bg-dark;
+		color: $body-color-dark;
+	}
+}
+
+.modal-header {
+	.close {
+		color: $white !important;
+	}
+}

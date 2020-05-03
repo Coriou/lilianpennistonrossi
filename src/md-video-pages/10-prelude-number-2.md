@@ -6,6 +6,7 @@ id: "pylMR0vusGc"
 meta: "difficulty,hard"
 path: "/v/prelude-number-2"
 featuredImage: ../images/covers/10-prelude-number-2.jpg
+partition: ../partitions/10-prelude-number-2.pdf
 ---
 
 Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.

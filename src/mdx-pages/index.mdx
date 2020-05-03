@@ -20,13 +20,12 @@ Sunt consectetur reprehenderit aliquip nisi commodo. Quis enim sunt do magna ad.
 		color="primary"
 		className="btn-iconed w-25 text-white"
 		block
-		onClick={() => navigate("/v")}
+		to={"/v"}
+		tag={Link}
 	>
 		<span className="btn-icon">
 			<FiTv />
 		</span>
-		<span className="btn-text">
-			<Link to={"/v"}>Videos</Link>
-		</span>
+		<span className="btn-text">Videos</span>
 	</Button>
 </div>
