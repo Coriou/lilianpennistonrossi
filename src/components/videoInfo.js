@@ -99,14 +99,13 @@ export default ({
 						color="primary"
 						className="btn-iconed w-25 text-white"
 						block
-						onClick={() => navigate(path)}
+						to={path}
+						tag={Link}
 					>
 						<span className="btn-icon">
 							<FiPlay />
 						</span>
-						<span className="btn-text">
-							<Link to={path}>Watch</Link>
-						</span>
+						<span className="btn-text">Watch</span>
 					</Button>
 				</div>
 			)
