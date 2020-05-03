@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { Button } from "reactstrap"
+import { FiPlay } from "react-icons/fi"
 import { thousandSeparator, parseDuration } from "../utils"
 
 export default ({
@@ -90,9 +91,19 @@ export default ({
 			if (!small) return null
 
 			return (
-				<div className="d-flex mt-4 align-content-center justify-content-center">
-					<Button outline color="primary">
-						<Link to={path}>Watch</Link>
+				<div className="mt-4 d-flex flex-column align-items-center">
+					<Button
+						color="primary"
+						className="btn-iconed w-25 text-white"
+						block
+						onClick={() => navigate(path)}
+					>
+						<span className="btn-icon">
+							<FiPlay />
+						</span>
+						<span className="btn-text">
+							<Link to={path}>Watch</Link>
+						</span>
 					</Button>
 				</div>
 			)
