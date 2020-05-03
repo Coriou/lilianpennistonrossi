@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { Button } from "reactstrap"
-import dayjs from "dayjs"
-import duration from "dayjs/plugin/duration"
-import { thousandSeparator } from "../utils"
-
-dayjs.extend(duration)
+import { thousandSeparator, parseDuration } from "../utils"
 
 export default ({
 	videoID,
@@ -36,10 +32,10 @@ export default ({
 			}
 
 			try {
-				const d = dayjs.duration(stats.items[0].contentDetails.duration)
-				setDuration(
-					`${d.minutes().padStart(2, 0)}:${d.seconds().padStart(2, 0)}`
+				const videoDuration = parseDuration(
+					stats.items[0].contentDetails.duration
 				)
+				setDuration(videoDuration || "-")
 			} catch (err) {
 				console.error(err)
 			}
