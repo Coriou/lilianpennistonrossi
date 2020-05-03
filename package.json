@@ -19,10 +19,7 @@
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.5.7",
-    "gatsby-source-youtube-v2": "^1.0.1",
     "gatsby-transformer-sharp": "^2.4.7",
-    "plyr": "^3.5.10",
-    "plyr-react": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,6 +29,7 @@
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
     "gatsby-plugin-sass": "^2.2.4",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.9",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.3",
     "node-sass": "^4.14.0",
