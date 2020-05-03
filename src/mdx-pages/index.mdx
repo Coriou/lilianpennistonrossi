@@ -3,8 +3,9 @@ path: "/"
 featuredImage: ../images/mainCover.jpg
 ---
 
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { Button } from "reactstrap"
+import { FiTv } from "react-icons/fi"
 
 ### Write something about yourself here
 
@@ -15,7 +16,17 @@ Maybe let your audience know a little bit about yourself, your piano, ... Maybe 
 Sunt consectetur reprehenderit aliquip nisi commodo. Quis enim sunt do magna ad. Non exercitation deserunt deserunt do irure incididunt esse labore exercitation nulla. Pariatur veniam sint ullamco laborum reprehenderit do cupidatat. Ad magna qui nostrud deserunt id et Lorem sint ex sit ut Lorem aliqua sunt. Duis duis labore magna ullamco non tempor.
 
 <div className="d-flex justify-content-center align-content-center mb-6">
-	<Button outline color="primary">
-		<Link to="/v">Videos</Link>
+	<Button
+		color="primary"
+		className="btn-iconed w-25 text-white"
+		block
+		onClick={() => navigate("/v")}
+	>
+		<span className="btn-icon">
+			<FiTv />
+		</span>
+		<span className="btn-text">
+			<Link to={"/v"}>Videos</Link>
+		</span>
 	</Button>
 </div>
