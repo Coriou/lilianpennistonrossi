@@ -1,9 +1,12 @@
+const isDev = process.env.NODE_ENV !== "production"
+
 module.exports = {
 	siteMetadata: {
 		title: `Lilian Penniston-Rossi`,
-		description: ``,
+		description: `A place to share my love for piano`,
 		author: `@coriou`,
-		url: "https://lilian.video",
+		url: isDev ? "http://localhost:8000" : "https://lilian.video",
+		isDev,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
