@@ -1,6 +1,8 @@
 .logo {
-	max-width: 286px;
+	width: 100%;
 	height: auto;
+	max-width: 286px;
+	max-height: 50px;
 
 	@include respond-below(md) {
 		max-width: 100px;
