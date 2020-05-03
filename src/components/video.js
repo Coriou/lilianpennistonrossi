@@ -42,5 +42,12 @@ export default ({ videoID, className, small, path, title, cover }) => {
 			</div>
 		)
 
-	return <Player videoID={videoID} className={className} title={title} />
+	return (
+		<Player
+			videoID={videoID}
+			className={className}
+			title={title}
+			cover={cover}
+		/>
+	)
 }

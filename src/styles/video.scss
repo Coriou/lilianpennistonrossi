@@ -38,6 +38,10 @@
 	border: 2px solid $primary;
 	border-radius: 2px;
 
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
 	&:hover {
 		border-color: #bababa;
 	}

@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ({ videoID, className, title }) => {
+export default ({ videoID, className, title, cover }) => {
 	return (
 		<div
 			className={[
@@ -9,6 +9,7 @@ export default ({ videoID, className, title }) => {
 				"video-player",
 				className,
 			].join(" ")}
+			style={{ backgroundImage: cover ? `url(${cover.base64})` : "" }}
 		>
 			<iframe
 				title={title}

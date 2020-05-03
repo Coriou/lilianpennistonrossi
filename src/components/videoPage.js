@@ -31,6 +31,11 @@ export default ({ data }) => {
 				meta={videoMeta}
 				excerpt={excerpt}
 				path={frontmatter.path}
+				cover={
+					frontmatter.featuredImage
+						? frontmatter.featuredImage.cover.fluid
+						: false
+				}
 			/>
 		</Layout>
 	)
@@ -53,6 +58,11 @@ export const pageQuery = graphql`
 					social: childImageSharp {
 						fixed(width: 1200, height: 628, quality: 95) {
 							...GatsbyImageSharpFixed
+						}
+					}
+					cover: childImageSharp {
+						fluid(maxWidth: 3840, quality: 90) {
+							...GatsbyImageSharpFluid
 						}
 					}
 				}
