@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => {
 												About
 											</NavLink>
 										</NavItem>
-										<NavItem className="d-flex align-self-center">
+										<NavItem className="d-flex align-self-md-center align-self-start">
 											<ThemeToggle toggleTheme={toggleTheme} theme={theme} />
 										</NavItem>
 									</Nav>
