@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react"
-import { Link, navigate } from "gatsby"
+import React from "react"
+import { Link } from "gatsby"
 import { Button } from "reactstrap"
-import { GiMusicalScore } from "react-icons/gi"
 import { FiPlay } from "react-icons/fi"
-import { thousandSeparator, parseDuration } from "../utils"
-import PDFModal from "./pdfModal"
-import slugify from "slugify"
+
+import Meta from "./videoInfo/meta"
+import Description from "./videoInfo/description"
+import Partition from "./videoInfo/partition"
 
 export default ({
 	videoID,
@@ -13,167 +13,12 @@ export default ({
 	artist,
 	description,
 	meta = [],
-	small,
+	preview,
 	author,
 	excerpt,
 	partition,
 	path,
 }) => {
-	const [views, setViews] = useState("-")
-	const [duration, setDuration] = useState("-")
-
-	useEffect(() => {
-		const getMeta = async () => {
-			const stats = await fetch(
-				`https://www.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoID}&key=AIzaSyCDAuRWU9k9TaI2Xnj4SKvJ4oLv6AOsLBs`
-			)
-				.then(r => r.json())
-				.catch(console.error)
-
-			try {
-				setViews(thousandSeparator(stats.items[0].statistics.viewCount))
-			} catch (err) {
-				console.error(err)
-			}
-
-			try {
-				const videoDuration = parseDuration(
-					stats.items[0].contentDetails.duration
-				)
-				setDuration(videoDuration || "-")
-			} catch (err) {
-				console.error(err)
-			}
-		}
-
-		if (!small) getMeta()
-	}, [videoID, small])
-
-	const Meta = () => {
-		if (small) return null
-
-		return (
-			<ul className="video-meta list-unstyled list-inline">
-				<li className="list-inline-item">
-					<b>Duration</b> <span>{duration}</span>
-				</li>
-				<li className="list-inline-item">
-					<b>Views</b> <span>{views}</span>
-				</li>
-			</ul>
-		)
-
-		// if (!meta || !Array.isArray(meta) || !meta.length) return null
-
-		// return (
-		// 	<div>
-		// 		<ul className="video-meta list-unstyled list-inline">
-		// 			{meta.map((m, i) => {
-		// 				const [k, v] = m
-
-		// 				return (
-		// 					<li className="list-inline-item" key={i}>
-		// 						<b>{k}</b> <span>{v}</span>
-		// 					</li>
-		// 				)
-		// 			})}
-		// 		</ul>
-		// 	</div>
-		// )
-	}
-
-	const Details = () => {
-		if (small) description = excerpt
-
-		const Author = () => {
-			if (small) return null
-
-			return <p className="text-primary text-cursive">- {author || "Lilian"}</p>
-		}
-
-		const Go = () => {
-			if (!small) return null
-
-			return (
-				<div className="mt-4 d-flex flex-column align-items-center">
-					<Button
-						color="primary"
-						className="btn-iconed w-25 text-white"
-						block
-						to={path}
-						tag={Link}
-					>
-						<span className="btn-icon">
-							<FiPlay />
-						</span>
-						<span className="btn-text">Watch</span>
-					</Button>
-				</div>
-			)
-		}
-
-		return (
-			<>
-				{!small && <hr className="w-50 mt-4 mb-4" />}
-
-				<div
-					className="video-description"
-					dangerouslySetInnerHTML={{ __html: description }}
-				/>
-				<Author />
-				<Go />
-			</>
-		)
-	}
-
-	const Partition = () => {
-		const [show, setShow] = useState(false)
-
-		if (small || !partition) return null
-
-		const toggle = () => setShow(!show)
-
-		const forceDownload = () => {
-			// If it's Safari
-			if (typeof navigator !== "undefined" && navigator.userAgent)
-				return (
-					navigator.userAgent.match(/Safari/gi) &&
-					!navigator.userAgent.match(/Chrome/gi)
-				)
-
-			return false
-		}
-
-		return (
-			<div className="d-flex flex-column justify-items-center align-items-center">
-				<hr className="w-50 mt-4 mb-4" />
-
-				<Button
-					color="primary"
-					className="btn-iconed w-25 text-white"
-					block
-					onClick={toggle}
-					href={forceDownload() ? partition : null}
-					download={forceDownload() ? `${slugify(title)}.pdf` : false}
-				>
-					<span className="btn-icon">
-						<GiMusicalScore />
-					</span>
-					<span className="btn-text">Sheet music</span>
-				</Button>
-
-				{!forceDownload() && (
-					<PDFModal
-						partition={partition}
-						active={show}
-						setter={setShow}
-						title={title}
-					/>
-				)}
-			</div>
-		)
-	}
-
 	return (
 		<div className="video-details">
 			<Link to={path}>
@@ -184,11 +29,33 @@ export default ({
 				{artist}
 			</h6>
 
-			<Meta />
+			{!preview && <Meta videoID={videoID} meta={meta} />}
 
-			<Details />
+			<Description
+				description={description}
+				excerpt={excerpt}
+				author={author}
+				preview={preview}
+			/>
 
-			<Partition />
+			{preview && (
+				<div className="mt-4 d-flex flex-column align-items-center">
+					<Button
+						color="primary"
+						className="btn-iconed w-50 w-md-25 text-white"
+						block
+						to={path}
+						tag={Link}
+					>
+						<span className="btn-icon">
+							<FiPlay />
+						</span>
+						<span className="btn-text">Watch</span>
+					</Button>
+				</div>
+			)}
+
+			{!preview && <Partition partition={partition} title={title} />}
 		</div>
 	)
 }

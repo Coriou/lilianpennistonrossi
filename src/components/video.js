@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Player from "./player"
 // import PlayIcon from "../images/play-icon-holly.svg"
 
-export default ({ videoID, className, small, path, title, cover }) => {
+export default ({ videoID, className, preview, path, title, cover }) => {
 	const Cover = () => {
 		if (cover) return <Img fluid={cover} alt={title} />
 
@@ -17,7 +17,7 @@ export default ({ videoID, className, small, path, title, cover }) => {
 		)
 	}
 
-	if (small)
+	if (preview)
 		return (
 			<div
 				className={[

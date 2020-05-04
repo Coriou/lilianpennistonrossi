@@ -26,7 +26,7 @@ const VideoPages = ({ data }) => {
 			return (
 				<Col md={12} lg={6} key={i}>
 					<VideoWrapper
-						small
+						preview
 						path={frontmatter.path}
 						videoID={frontmatter.id}
 						title={frontmatter.title}

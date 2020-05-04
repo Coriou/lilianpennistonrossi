@@ -36,3 +36,18 @@ a[href]:hover {
 		color: inherit;
 	}
 }
+
+@include respond-above(md) {
+	.w-md-25 {
+		width: 25% !important;
+	}
+	.w-md-50 {
+		width: 50% !important;
+	}
+	.w-md-75 {
+		width: 75% !important;
+	}
+	.w-md-100 {
+		width: 100% !important;
+	}
+}
