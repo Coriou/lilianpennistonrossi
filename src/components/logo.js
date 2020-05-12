@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import useWindowSize from "../useWindowSize"
+import { useWindowSize } from "../utils"
 // import LogoLong from "../images/lilian-logo-long-holly.svg"
 // import LogoSmall from "../images/lilian-logo-small-holly.svg"
 
