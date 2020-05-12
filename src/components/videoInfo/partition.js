@@ -29,7 +29,7 @@ export default ({ partition, title = "sheet-music" }) => {
 
 			<Button
 				color="primary"
-				className="btn-iconed w-50 w-md-25 text-white"
+				className="btn-iconed w-50 w-md-100 w-lg-75 w text-white"
 				block
 				onClick={toggle}
 				href={forceDownload() ? partition : null}
@@ -38,7 +38,7 @@ export default ({ partition, title = "sheet-music" }) => {
 				<span className="btn-icon">
 					<GiMusicalScore />
 				</span>
-				<span className="btn-text">Sheet music</span>
+				<span className="btn-text">Score</span>
 			</Button>
 
 			{!forceDownload() && (

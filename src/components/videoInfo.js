@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Button } from "reactstrap"
+import { Button, Row, Col } from "reactstrap"
 import { FiPlay } from "react-icons/fi"
 
 import Meta from "./videoInfo/meta"
@@ -19,30 +19,43 @@ export default ({
 	partition,
 	path,
 }) => {
+	const displaySidebar = !preview && partition
+
 	return (
 		<div className="video-details">
-			<Link to={path}>
-				<h3 className="mb-0 text-primary text-capitalize">{title}</h3>
-			</Link>
+			<Row>
+				<Col>
+					<Link to={path}>
+						<h3 className="mb-0 text-primary text-capitalize">{title}</h3>
+					</Link>
 
-			<h6 className="mt-0 text-muted text-uppercase font-weight-normal">
-				{artist}
-			</h6>
+					<h6 className="mt-0 text-muted text-uppercase font-weight-normal">
+						{artist}
+					</h6>
 
-			{!preview && <Meta videoID={videoID} meta={meta} />}
+					{!preview && <Meta videoID={videoID} meta={meta} />}
+				</Col>
+			</Row>
 
-			<Description
-				description={description}
-				excerpt={excerpt}
-				author={author}
-				preview={preview}
-			/>
+			<Row>
+				<Col md={displaySidebar ? 9 : 12}>
+					<Description
+						description={description}
+						excerpt={excerpt}
+						author={author}
+						preview={preview}
+					/>
+				</Col>
+				<Col md={displaySidebar ? 3 : 0}>
+					<Partition partition={partition} title={title} />
+				</Col>
+			</Row>
 
 			{preview && (
 				<div className="mt-4 d-flex flex-column align-items-center">
 					<Button
 						color="primary"
-						className="btn-iconed w-50 w-md-25 text-white"
+						className="btn-iconed w-50 w-sm-25 text-white"
 						block
 						to={path}
 						tag={Link}
@@ -54,8 +67,6 @@ export default ({
 					</Button>
 				</div>
 			)}
-
-			{!preview && <Partition partition={partition} title={title} />}
 		</div>
 	)
 }
