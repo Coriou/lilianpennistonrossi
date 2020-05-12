@@ -27,7 +27,8 @@
     "react-pdf": "^4.1.0",
     "react-resize-aware": "^3.0.0",
     "reactstrap": "^8.4.1",
-    "slugify": "^1.4.0"
+    "slugify": "^1.4.0",
+    "store2": "^2.11.2"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",

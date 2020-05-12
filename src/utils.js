@@ -1,3 +1,5 @@
+import store from "store2"
+
 // Return a boolean depending if the value is numeric (works with strings)
 export const isNumeric = value => {
 	if (typeof value === "string") value = value.replace(/[,|-]/, "")
@@ -30,4 +32,19 @@ export const parseDuration = duration => {
 		console.error(err)
 		return false
 	}
+}
+
+export const setCache = (key, value) => {
+	return store(key, { data: value, updated: Date.now() })
+}
+
+export const getCache = (key, ttl = false) => {
+	const v = store(key)
+	if (!v || !v.data) return false
+
+	if (!ttl) return v.data
+
+	if (v.updated && Date.now() - parseInt(v.updated) >= ttl) return false
+
+	return v.data
 }
