@@ -1,12 +1,12 @@
 ---
-title: "Fantaisie-Impromptu"
-author: "Frédéric Chopin"
-date: "2020-05-02 00:50"
-id: "fpL4YV-ljfM"
-meta: "difficulty,hard"
-path: "/v/fantaisie-impromptu"
+title: Fantaisie-Impromptu
+author: Frédéric Chopin
+date: 2020-05-02 00:50
+id: fpL4YV-ljfM
+meta: difficulty,hard
+path: /v/fantaisie-impromptu
 featuredImage: ../images/covers/11-fantaisie-impromptu.jpg
-partition: ../partitions/11-fantaisie-impromptu.pdf
+partition: /assets/11-fantaisie-impromptu.pdf
 ---
 
 Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
