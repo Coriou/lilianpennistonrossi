@@ -1,10 +1,10 @@
 ---
-title: "Fantaisie-Impromptu"
-author: "Frédéric Chopin"
-date: "2020-05-02 00:50"
-id: "fpL4YV-ljfM"
-meta: "difficulty,hard"
-path: "/v/fantaisie-impromptu"
+title: Fantaisie-Impromptu
+author: Frédéric Chopin
+date: 2020-05-02 00:50
+id: fpL4YV-ljfM
+meta: difficulty,hard
+path: /v/fantaisie-impromptu
 featuredImage: ../images/covers/11-fantaisie-impromptu.jpg
 partition: ../partitions/11-fantaisie-impromptu.pdf
 ---
