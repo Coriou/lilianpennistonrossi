@@ -13,7 +13,7 @@ export default ({ videoID }) => {
 	useEffect(() => {
 		const getYTData = async () => {
 			const cacheKey = `videoData_${videoID}`
-			const cache = getCache(cacheKey, 60 * 1000)
+			const cache = getCache(cacheKey, 10 * 60 * 1000)
 
 			if (cache) return cache
 
