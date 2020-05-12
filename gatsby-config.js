@@ -10,13 +10,6 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `images`,
-				path: `${__dirname}/src/images`,
-			},
-		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-dark-mode`,
@@ -44,29 +37,33 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `video-pages`,
-				path: `${__dirname}/src/md-video-pages`,
+				name: `images`,
+				path: `${__dirname}/content/images`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `videos`,
+				path: `${__dirname}/content/videos`,
 			},
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `partitions`,
-				path: `${__dirname}/src/partitions`,
+				path: `${__dirname}/content/partitions`,
 			},
-		},
-		`gatsby-transformer-remark`,
-		{
-			resolve: `gatsby-plugin-netlify`,
-			options: {},
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `mdx-pages`,
-				path: `${__dirname}/src/mdx-pages`,
+				name: `pages`,
+				path: `${__dirname}/content/pages`,
 			},
 		},
+		`gatsby-transformer-remark`,
+		`gatsby-plugin-netlify`,
 		// {
 		// 	resolve: `gatsby-source-youtube-v2`,
 		// 	options: {
