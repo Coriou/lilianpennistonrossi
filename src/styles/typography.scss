@@ -53,3 +53,15 @@ h6 {
 		font-weight: 600 !important;
 	}
 }
+
+strong,
+b {
+	font-weight: 600;
+}
+
+body.dark {
+	strong,
+	b {
+		color: lighten($body-color-dark, 5%);
+	}
+}
