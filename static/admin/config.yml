@@ -2,7 +2,10 @@ backend:
   name: github
   repo: coriou/lilianpennistonrossi
 
-media_folder: static/images
+editor:
+  preview: false
+
+media_folder: content/uploads
 public_folder: /assets
 
 logo_url: https://lilian.video/static/b618bb4234903b983ce54474b8483482/0580a/lilian-logo-long-holly.png
@@ -13,13 +16,18 @@ collections:
     folder: content/videos
     create: true
     fields:
-      - { name: title, label: Title }
-      - { name: author, label: Author }
-      - { name: date, label: Date, widget: datetime }
-      - { name: id, label: Youtube ID }
-      - { name: textAuthor, label: Description's author }
-      - { name: meta, label: Metadata }
-      - { name: path, label: Path }
-      - { name: featuredImage, label: Image }
-      - { name: partition, label: Partition }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: "Title", widget: "string" }
+      - { name: author, label: "Author", widget: "string" }
+      - { name: date, label: "Date", widget: datetime }
+      - { name: id, label: "Youtube ID", widget: "string" }
+      - {
+          name: textAuthor,
+          label: "Description's author",
+          widget: "string",
+          required: false,
+        }
+      - { name: meta, label: "Metadata", widget: "string", required: false }
+      - { name: path, label: "Path", widget: "string" }
+      - { name: featuredImage, label: "Image", widget: "image" }
+      - { name: partition, label: "Partition", widget: file, required: false }
+      - { name: body, label: "Body", widget: markdown, required: false }
