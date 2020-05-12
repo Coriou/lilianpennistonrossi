@@ -2,13 +2,11 @@ const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions
-	const videoPage = path.resolve(`src/components/videoPage.js`)
+	const videoPage = path.resolve(`src/templates/videoPage.js`)
+	const videosPage = path.resolve(`src/templates/videosPage.js`)
 	const result = await graphql(`
 		{
-			allMarkdownRemark(
-				sort: { order: DESC, fields: [frontmatter___date] }
-				limit: 1000
-			) {
+			allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
 				edges {
 					node {
 						frontmatter {
@@ -25,11 +23,30 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		return
 	}
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	// Create single video page
+	result.data.allMarkdownRemark.edges.forEach(({ node }, i) => {
 		createPage({
 			path: node.frontmatter.path,
 			component: videoPage,
 			context: {},
+		})
+	})
+
+	// Create listed pagination
+	const posts = result.data.allMarkdownRemark.edges
+	const postsPerPage = 6
+	const numPages = Math.ceil(posts.length / postsPerPage)
+
+	Array.from({ length: numPages }).forEach((_, i) => {
+		createPage({
+			path: i === 0 ? `/v` : `/v/${i}`,
+			component: videosPage,
+			context: {
+				limit: postsPerPage,
+				skip: i * postsPerPage,
+				numPages,
+				currentPage: i + 1,
+			},
 		})
 	})
 }

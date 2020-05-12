@@ -24,6 +24,18 @@ body.dark {
 	hr {
 		border-color: darken($primary, 0%);
 	}
+
+	ul.pagination {
+		a.page-link {
+			background-color: #333a40;
+			border-color: lighten(#333a40, 25%);
+
+			&:hover {
+				color: lighten($primary, 25%);
+				background-color: lighten(#333a40, 10%);
+			}
+		}
+	}
 }
 
 a[href]:hover {
@@ -50,4 +62,9 @@ a[href]:hover {
 	.w-md-100 {
 		width: 100% !important;
 	}
+}
+
+ul.pagination {
+	padding: 0;
+	margin: 0;
 }
