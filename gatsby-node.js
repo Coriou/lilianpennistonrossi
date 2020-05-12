@@ -50,3 +50,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		})
 	})
 }
+
+// https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/#disable-widget-on-site
+const webpack = require(`webpack`)
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+	actions.setWebpackConfig({
+		plugins: [
+			new webpack.IgnorePlugin({
+				resourceRegExp: /^netlify-identity-widget$/,
+			}),
+		],
+	})
+}

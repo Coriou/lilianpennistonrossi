@@ -63,7 +63,12 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-remark`,
-		`gatsby-plugin-netlify`,
+		{
+			resolve: `gatsby-plugin-netlify`,
+			options: {
+				enableIdentityWidget: false,
+			},
+		},
 		// {
 		// 	resolve: `gatsby-source-youtube-v2`,
 		// 	options: {
