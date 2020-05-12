@@ -7,7 +7,7 @@ export default ({ partition }) => {
 	const wrapperRef = useRef(null)
 	const [hasLoaded, setHasLoaded] = useState(false)
 	const [pageNumber, setPageNumber] = useState(1)
-	const [numPages, setNumPages] = useState(null)
+	const [numPages, setNumPages] = useState("-")
 
 	const pageDown = () => {
 		if (parseInt(pageNumber) !== 1) setPageNumber(pageNumber - 1)
