@@ -55,7 +55,7 @@ export default ({ partition }) => {
 		typeof Document.current === "undefined" ||
 		typeof Page.current === "undefined"
 	)
-		return <p>Loading...</p>
+		return <p>Loading PDF...</p>
 
 	if (partition)
 		return (
