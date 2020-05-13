@@ -16,6 +16,16 @@
 			font-weight: 400;
 			text-transform: uppercase;
 			color: $white;
+
+			svg {
+				margin-bottom: 2px;
+				font-weight: normal;
+				color: inherit;
+
+				@media (max-resolution: 96dpi) {
+					display: none !important;
+				}
+			}
 		}
 
 		span {

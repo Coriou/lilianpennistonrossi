@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { RiTimerLine } from "react-icons/ri"
+import { FiEye } from "react-icons/fi"
 import {
 	thousandSeparator,
 	parseDuration,
@@ -53,10 +55,16 @@ export default ({ videoID }) => {
 	return (
 		<ul className="video-meta list-unstyled list-inline">
 			<li className="list-inline-item">
-				<b>Duration</b> <span>{duration}</span>
+				<b>
+					<RiTimerLine /> Duration
+				</b>{" "}
+				<span>{duration}</span>
 			</li>
 			<li className="list-inline-item">
-				<b>Views</b> <span>{views}</span>
+				<b>
+					<FiEye /> Views
+				</b>{" "}
+				<span>{views}</span>
 			</li>
 		</ul>
 	)
