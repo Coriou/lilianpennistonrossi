@@ -33,6 +33,7 @@ export default ({ partition, title = "sheet-music" }) => {
 				block
 				onClick={toggle}
 				href={forceDownload() ? partition : null}
+				target="_blank"
 				download={forceDownload() ? `${slugify(title)}.pdf` : false}
 			>
 				<span className="btn-icon">
