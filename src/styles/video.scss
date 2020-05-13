@@ -18,12 +18,23 @@
 			color: $white;
 
 			svg {
-				margin-bottom: 2px;
 				font-weight: normal;
 				color: inherit;
 
+				height: 12px;
+				width: 12px;
+
 				@media (max-resolution: 96dpi) {
 					display: none !important;
+				}
+
+				@include respond-between(xs, sm) {
+					margin-bottom: 2px;
+					margin-top: 2px;
+				}
+
+				@include respond-above(md) {
+					margin-bottom: 2px;
 				}
 			}
 		}
@@ -111,4 +122,16 @@ body.dark {
 			}
 		}
 	}
+}
+
+// Someone needs to volunteer to go & suck this guy's dick - fucking legend
+// https://stackoverflow.com/a/25975282/10298824
+_::-webkit-full-page-media,
+_:future,
+:root .video-meta li b svg {
+	@include respond-above(xs) {
+		margin-bottom: 2px;
+	}
+
+	margin-bottom: 1px;
 }
