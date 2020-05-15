@@ -1,14 +1,13 @@
 ---
-title: "Rêverie"
-author: "Robert Schumann"
-date: "2020-05-02 00:57"
-id: "OnzMscGUnPU"
-meta: "difficulty,hard"
-path: "/v/reverie"
+title: Dreaming, from Scenes of Childhood
+author: Robert Schumann
+authorBirthDeath: (1810 – 1856)
+date: 2020-05-01T22:57:00.000Z
+id: OnzMscGUnPU
+meta: difficulty,hard
+path: /v/dreaming-scenes-of-childhood
 featuredImage: ../images/covers/4-reverie.jpg
 partition: ../partitions/4-reverie.pdf
 ---
 
-Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
-
-Fugiat adipisicing dolore deserunt veniam pariatur aliqua consectetur nisi veniam reprehenderit ex ullamco. Reprehenderit et anim fugiat aliquip id nulla Lorem commodo sint. Pariatur labore occaecat sint dolor elit exercitation.
+Schumann was told by his future 19-year old wife Clara Wieck that « _he seemed like a child_ ». In fact she was and remained a sensitive, guileless artist, easily wounded and extremely unworldly. His Romantic spirit gave rise to some of the greatest piano music ever composed. Clara had to take her case for marrying him to court, after her father’s repeated refusal to give his consent. She won her case.

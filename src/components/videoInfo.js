@@ -11,6 +11,7 @@ export default ({
 	videoID,
 	title,
 	artist,
+	authorBirthDeath,
 	description,
 	meta = [],
 	preview,
@@ -30,7 +31,10 @@ export default ({
 					</Link>
 
 					<h6 className="mt-0 text-muted text-uppercase font-weight-normal">
-						{artist}
+						{artist}{" "}
+						{!preview && authorBirthDeath && (
+							<span className="small">{authorBirthDeath}</span>
+						)}
 					</h6>
 
 					{!preview && <Meta videoID={videoID} meta={meta} />}

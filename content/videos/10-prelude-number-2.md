@@ -1,14 +1,13 @@
 ---
-title: "Prélude No. 2"
-author: "Johann Sebastian Bach"
-date: "2020-05-02 00:51"
-id: "pylMR0vusGc"
-meta: "difficulty,hard"
-path: "/v/prelude-number-2"
+title: Prelude N° 2
+author: Johann Sebastian Bach
+authorBirthDeath: (1685 – 1750)
+date: 2020-05-01T22:51:00.000Z
+id: pylMR0vusGc
+meta: difficulty,hard
+path: /v/prelude-number-2
 featuredImage: ../images/covers/10-prelude-number-2.jpg
 partition: ../partitions/10-prelude-number-2.pdf
 ---
 
-Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
-
-Fugiat adipisicing dolore deserunt veniam pariatur aliqua consectetur nisi veniam reprehenderit ex ullamco. Reprehenderit et anim fugiat aliquip id nulla Lorem commodo sint. Pariatur labore occaecat sint dolor elit exercitation.
+This is the second prelude of the 48 preludes and fugues contained in the _Well-tempered Clavier._

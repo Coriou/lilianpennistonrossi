@@ -1,14 +1,13 @@
 ---
-title: Fantaisie-Impromptu
+title: Fantasy – Impromptu
 author: Frédéric Chopin
-date: 2020-05-02 00:50
+authorBirthDeath: (1810 – 1849)
+date: 2020-05-01T22:50:00.000Z
 id: fpL4YV-ljfM
 meta: difficulty,hard
-path: /v/fantaisie-impromptu
+path: /v/fantasy-impromptu
 featuredImage: ../images/covers/11-fantaisie-impromptu.jpg
 partition: ../partitions/11-fantaisie-impromptu.pdf
 ---
 
-Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
-
-Fugiat adipisicing dolore deserunt veniam pariatur aliqua consectetur nisi veniam reprehenderit ex ullamco. Reprehenderit et anim fugiat aliquip id nulla Lorem commodo sint. Pariatur labore occaecat sint dolor elit exercitation.
+A posthumus work illustrating one of Chopin’s innovations, namely of superposing binary and tertiary (two-beat and three-beat) rhythms, one in the left hand, the other in the right hand, an extremely difficulttechnique requiring a perfect independence of each hand from the other. Combined with a swift tempo, sixteen-note bar and rapidly, constantly changing accidentals, it isn’t a piece for the faint-hearted.

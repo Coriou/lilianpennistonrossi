@@ -40,6 +40,7 @@ const VideoPages = ({ data, pageContext }) => {
 						title={frontmatter.title}
 						artist={frontmatter.author}
 						author={frontmatter.textAuthor}
+						authorBirthDeath={frontmatter.authorBirthDeath}
 						description={html}
 						meta={videoMeta}
 						excerpt={excerpt}
@@ -124,6 +125,7 @@ export const pageQuery = graphql`
 					html
 					frontmatter {
 						author
+						authorBirthDeath
 						date(formatString: "DD-MM-YYYY HH:MM")
 						id
 						meta

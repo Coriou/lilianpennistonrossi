@@ -1,14 +1,12 @@
 ---
-title: "Sarabande"
-author: "Georg Friedrich Haendel"
-date: "2020-05-02 00:54"
-id: "9ONFsA9IDN0"
-meta: "difficulty,hard"
-path: "/v/sarabande"
+title: Sarabande
+author: Georg Friedrich Haendel
+authorBirthDeath: (1685 – 1759)
+date: 2020-05-01T22:52:00.000Z
+id: 9ONFsA9IDN0
+meta: difficulty,hard
+path: /v/sarabande
 featuredImage: ../images/covers/7-sarabande.jpg
 partition: ../partitions/7-sarabande.pdf
 ---
-
-Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
-
-Fugiat adipisicing dolore deserunt veniam pariatur aliqua consectetur nisi veniam reprehenderit ex ullamco. Reprehenderit et anim fugiat aliquip id nulla Lorem commodo sint. Pariatur labore occaecat sint dolor elit exercitation.
+Haendel is a German composer who spent the last 35 years of his life at the English Court in London, where the three Georgian Kings of the House of Hanover reigned from 1714 to 1887. He was the first composer to earn his living through music, as the King and Queen of England’s official conductor. The Sarabande is a stately dance, expressing here the Sovereigns’ majesty and glory.

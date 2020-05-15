@@ -26,6 +26,7 @@ export default ({ data }) => {
 				videoID={frontmatter.id}
 				title={frontmatter.title}
 				artist={frontmatter.author}
+				authorBirthDeath={frontmatter.authorBirthDeath}
 				author={frontmatter.textAuthor}
 				description={html}
 				meta={videoMeta}
@@ -55,6 +56,7 @@ export const pageQuery = graphql`
 				date(formatString: "DD-MM-YYYY HH:MM")
 				title
 				author
+				authorBirthDeath
 				textAuthor
 				path
 				meta

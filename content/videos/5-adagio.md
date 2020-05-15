@@ -1,14 +1,12 @@
 ---
-title: "Adagio"
-author: "Tomaso Albinoni"
-date: "2020-05-02 00:56"
-id: "07j7YiTZ1j4"
-meta: "difficulty,hard"
-path: "/v/adagio"
+title: Adagio
+author: Tomaso Albinoni
+authorBirthDeath: (1671 – 1751)
+date: 2020-05-01T22:56:00.000Z
+id: 07j7YiTZ1j4
+meta: difficulty,hard
+path: /v/adagio
 featuredImage: ../images/covers/5-adagio.jpg
 partition: ../partitions/5-adagio.pdf
 ---
-
-Incididunt sunt sunt in id aliqua in. Ipsum amet enim incididunt cillum aliqua ipsum incididunt enim commodo anim dolor. Ea id adipisicing ullamco quis adipisicing deserunt eiusmod. _Consequat ex et irure ex reprehenderit cupidatat et ullamco aliqua_ elit sunt dolor exercitation. Enim qui labore pariatur velit amet cupidatat est veniam dolor est.
-
-Fugiat adipisicing dolore deserunt veniam pariatur aliqua consectetur nisi veniam reprehenderit ex ullamco. Reprehenderit et anim fugiat aliquip id nulla Lorem commodo sint. Pariatur labore occaecat sint dolor elit exercitation.
+This poignant adagio was found among the ruins of Dresden at the end of World War Two, by a musicologist who adapted it and who now owns the copyright. The original manuscript, for organ and strings, was by a 17th century Venetian composer. It’s a fitting piece to express the suffering caused by war to men of all countries.
