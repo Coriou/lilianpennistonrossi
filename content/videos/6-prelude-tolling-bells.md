@@ -6,7 +6,7 @@ date: 2020-05-01T22:55:00.000Z
 id: x67KVpQEsBI
 meta: difficulty,hard
 path: /v/prelude-tolling-bells
-featuredImage: ../images/covers/5-prelude-tolling-bells.jpg
+featuredImage: ../images/covers/6-prelude-tolling-bells.jpg
 partition: ../partitions/6-prelude-tolling-bells.pdf
 ---
 
