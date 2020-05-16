@@ -3,7 +3,7 @@ title: Of Foreign Lands and People
 author: Robert Schumann
 authorBirthDeath: (1810 – 1856)
 date: 2020-05-01T22:53:00.000Z
-id: JSubNClnkNM
+id: we8PdITHCuM
 meta: difficulty,hard
 path: /v/of-foreign-lands-and-people
 featuredImage: ../images/covers/9-scenes-d-enfants.jpg

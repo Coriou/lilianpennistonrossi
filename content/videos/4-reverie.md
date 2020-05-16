@@ -3,7 +3,7 @@ title: Dreaming, from Scenes of Childhood
 author: Robert Schumann
 authorBirthDeath: (1810 – 1856)
 date: 2020-05-01T22:57:00.000Z
-id: OnzMscGUnPU
+id: nBdHBx3Oidk
 meta: difficulty,hard
 path: /v/dreaming-scenes-of-childhood
 featuredImage: ../images/covers/4-reverie.jpg

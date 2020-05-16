@@ -3,7 +3,7 @@ title: Prelude N° 4 Op. 28
 author: Frédéric Chopin
 authorBirthDeath: (1810–1849)
 date: 2020-05-01T22:59:00.000Z
-id: Win2-p2tVag
+id: eoC8S1L8omc
 meta: difficulty,hard
 path: /v/prelude-number-4-opus-28
 featuredImage: ../images/covers/2-prelude-number-4-opus-28.jpg

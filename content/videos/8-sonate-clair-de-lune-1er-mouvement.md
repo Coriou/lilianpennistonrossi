@@ -3,7 +3,7 @@ title: Moonlight Sonata 1st movement
 author: Ludwig van Beethoven
 authorBirthDeath: (1770–1827)
 date: 2020-05-01T22:54:00.000Z
-id: j6v2Gq9yNrQ
+id: Q8RUeDu-6io
 meta: difficulty,hard
 path: /v/moonlight-sonata-1st-movement
 featuredImage: ../images/covers/8-sonate-clair-de-lune-1er-mouvement.jpg

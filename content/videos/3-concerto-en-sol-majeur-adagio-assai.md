@@ -3,7 +3,7 @@ title: Concerto in G major
 author: Maurice Ravel
 authorBirthDeath: (1875 – 1937)
 date: 2020-05-01T22:58:00.000Z
-id: z64gsfvHOWE
+id: 9-17auZqTGI
 textAuthor: ""
 meta: difficulty,hard
 path: /v/concerto-in-g-major-adagio-assai

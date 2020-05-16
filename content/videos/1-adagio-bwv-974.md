@@ -3,7 +3,7 @@ title: Adagio BWV 974
 author: Johann Sebastian Bach
 authorBirthDeath: (1685 – 1750)
 date: 2020-05-01T23:00:00.000Z
-id: pDfv4xvYnRw
+id: ChIRzmRcw9s
 textAuthor: Lilian
 meta: difficulty,easy
 path: /v/adagio-bwv-974
