@@ -32,7 +32,7 @@ const VideoPages = ({ data, pageContext }) => {
 			videoMeta.push(["Posted", frontmatter.date])
 
 			return (
-				<Col md={12} lg={6} key={i}>
+				<Col md={12} lg={6} key={i} className="d-flex flex-column flex-grow-1">
 					<VideoWrapper
 						preview
 						path={frontmatter.path}
