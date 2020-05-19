@@ -51,7 +51,7 @@ export const parseDuration = duration => {
 
 		let [, , minutes, seconds] = duration
 			.match(durationRegex)
-			.map(m => String(parseInt(m)).padStart(2, 0))
+			.map(m => String(parseInt(m) || 0).padStart(2, 0))
 
 		return `${minutes}:${seconds}`
 	} catch (err) {
