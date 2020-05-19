@@ -7,7 +7,7 @@ id: ChIRzmRcw9s
 textAuthor: Lilian
 meta: difficulty,easy
 path: /v/adagio-bwv-974
-featuredImage: ../images/covers/1-adagio-bwv-974.jpg
+featuredImage: ../images/covers/1-adagio-bwv-974-1.jpg
 partition: ../partitions/1-adagio-bwv-974.pdf
 ---
 

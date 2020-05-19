@@ -6,7 +6,7 @@ date: 2020-05-01T22:51:00.000Z
 id: h47VsgTFN78
 meta: difficulty,hard
 path: /v/prelude-number-2
-featuredImage: ../images/covers/10-prelude-number-2.jpg
+featuredImage: ../images/covers/10-prelude-number-2-1.jpg
 partition: ../partitions/10-prelude-number-2.pdf
 ---
 

@@ -6,7 +6,7 @@ date: 2020-05-01T22:59:00.000Z
 id: eoC8S1L8omc
 meta: difficulty,hard
 path: /v/prelude-number-4-opus-28
-featuredImage: ../images/covers/2-prelude-number-4-opus-28.jpg
+featuredImage: ../images/covers/2-prelude-number-4-opus-28-2.jpg
 partition: ../partitions/2-prelude-number-4-opus-28.pdf
 ---
 
