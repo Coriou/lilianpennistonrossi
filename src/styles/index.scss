@@ -82,3 +82,14 @@ ul.pagination {
 	padding: 0;
 	margin: 0;
 }
+
+.home-picture {
+	border-radius: 2px;
+	border: 2px solid $primary;
+}
+
+body.dark {
+	.home-picture {
+		// border-color: white;
+	}
+}
