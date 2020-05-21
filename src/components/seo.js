@@ -110,7 +110,7 @@ function SEO({ description, lang, meta, title, metaImage = false, videoID }) {
 						? [
 								{
 									property: "og:video",
-									content: `https://youtu.be/${videoID}`,
+									content: `https://www.youtube.com/embed/${videoID}`,
 								},
 						  ]
 						: []
