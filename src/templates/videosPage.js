@@ -8,7 +8,7 @@ import {
 	PaginationLink,
 } from "reactstrap"
 
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
 

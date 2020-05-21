@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "reactstrap"
 
-import Header from "./header"
+import Header from "../components/header"
 
 import "../styles/index.scss"
 

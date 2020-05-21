@@ -6,7 +6,7 @@ import { FiTv } from "react-icons/fi"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "../components/layout"
+import Layout from "../templates/layout"
 import SEO from "../components/seo"
 import HomePhoto from "../components/homePhoto"
 
