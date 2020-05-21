@@ -9,4 +9,5 @@ path: /v/of-foreign-lands-and-people
 featuredImage: ../images/covers/8-scenes-d-enfants-2.jpg
 partition: ../partitions/9-scenes-d-enfants.pdf
 ---
-Another of the 13 pieces composing *Scenes of Childhood*, delicate, child-like and innocent. The beat and recurring last notes of each bar echo like a lullaby in the nursery
+
+Another of the 13 pieces composing _Scenes of Childhood_, delicate, child-like and innocent. The beat and recurring last notes of each bar echo like a lullaby in the nursery
