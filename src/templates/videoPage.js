@@ -16,6 +16,7 @@ export default ({ data }) => {
 			<SEO
 				title={`${frontmatter.title} | ${frontmatter.author}`}
 				description={excerpt}
+				videoID={frontmatter.id}
 				metaImage={
 					frontmatter.featuredImage
 						? frontmatter.featuredImage.social.fixed

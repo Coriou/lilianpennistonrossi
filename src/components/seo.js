@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, metaImage = false, image }) {
+function SEO({ description, lang, meta, title, metaImage = false, videoID }) {
 	const {
 		site,
 		allFile: { edges },
@@ -101,6 +101,16 @@ function SEO({ description, lang, meta, title, metaImage = false, image }) {
 								{
 									name: "twitter:card",
 									content: "summary_large_image",
+								},
+						  ]
+						: []
+				)
+				.contact(
+					videoID
+						? [
+								{
+									property: "og:video",
+									content: `https://youtu.be/${videoID}`,
 								},
 						  ]
 						: []
