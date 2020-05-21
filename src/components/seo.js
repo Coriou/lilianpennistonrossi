@@ -105,7 +105,7 @@ function SEO({ description, lang, meta, title, metaImage = false, videoID }) {
 						  ]
 						: []
 				)
-				.contact(
+				.concat(
 					videoID
 						? [
 								{
