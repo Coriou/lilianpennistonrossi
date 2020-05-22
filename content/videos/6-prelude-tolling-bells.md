@@ -8,6 +8,7 @@ meta: difficulty,hard
 path: /v/prelude-tolling-bells
 featuredImage: ../images/covers/6-prelude-tolling-bells.jpg
 partition: ../partitions/6-prelude-tolling-bells.pdf
+playlist: /p/confinement-2020
 ---
 
 A melancholy piece with the principal melody in the left hand

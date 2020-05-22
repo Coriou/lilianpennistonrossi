@@ -9,6 +9,7 @@
 @import "btn";
 @import "pdf";
 @import "modal";
+@import "playlist";
 
 body,
 nav,
@@ -86,6 +87,10 @@ ul.pagination {
 .home-picture {
 	border-radius: 2px;
 	border: 2px solid $primary;
+}
+
+.cursor-pointer {
+	cursor: pointer !important;
 }
 
 body.dark {

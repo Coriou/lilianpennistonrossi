@@ -19,6 +19,7 @@ export default ({
 	excerpt,
 	partition,
 	path,
+	playlistComponent,
 }) => {
 	const displaySidebar = !preview && partition
 
@@ -42,7 +43,10 @@ export default ({
 			</Row>
 
 			<Row className="d-flex flex-grow-1">
-				<Col md={displaySidebar ? 9 : 12} className="flex-grow-1 h-100">
+				<Col
+					md={displaySidebar ? (playlistComponent ? 8 : 9) : 12}
+					className="flex-grow-1 h-100"
+				>
 					<Description
 						description={description}
 						excerpt={excerpt}
@@ -50,7 +54,7 @@ export default ({
 						preview={preview}
 					/>
 				</Col>
-				<Col md={displaySidebar ? 3 : 0}>
+				<Col md={displaySidebar ? (playlistComponent ? 4 : 3) : 0}>
 					<Partition partition={partition} title={title} />
 				</Col>
 			</Row>

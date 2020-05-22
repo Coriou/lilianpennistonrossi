@@ -51,6 +51,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `playlists`,
+				path: `${__dirname}/content/playlists`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `partitions`,
 				path: `${__dirname}/content/partitions`,
 			},

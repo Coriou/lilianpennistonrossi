@@ -8,6 +8,7 @@ meta: difficulty,hard
 path: /v/adagio
 featuredImage: ../images/covers/5-adagio-2.jpg
 partition: ../partitions/5-adagio.pdf
+playlist: /p/confinement-2020
 ---
 
 This poignant adagio was found among the ruins of Dresden at the end of World War Two, by a musicologist who adapted it and who now owns the copyright. The original manuscript, for organ and strings, was by a 17th century Venetian composer. It’s a fitting piece to express the suffering caused by war to men of all countries.

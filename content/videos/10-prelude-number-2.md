@@ -8,6 +8,7 @@ meta: difficulty,hard
 path: /v/prelude-number-2
 featuredImage: ../images/covers/10-prelude-number-2-1.jpg
 partition: ../partitions/10-prelude-number-2.pdf
+playlist: /p/confinement-2020
 ---
 
 This is the second prelude of the 48 preludes and fugues contained in the _Well-tempered Clavier._

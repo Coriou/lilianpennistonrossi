@@ -8,6 +8,7 @@ meta: difficulty,hard
 path: /v/prelude-number-4-opus-28
 featuredImage: ../images/covers/2-prelude-number-4-opus-28-2.jpg
 partition: ../partitions/2-prelude-number-4-opus-28.pdf
+playlist: /p/confinement-2020
 ---
 
 Chopin had a unique sense of selfhood. The only composers he could identify with were Mozart and Bach. The following prelude was composed as a hommage to Bach, displaying the constant changes from major to minor keys that are one of Bach’s hallmarks.

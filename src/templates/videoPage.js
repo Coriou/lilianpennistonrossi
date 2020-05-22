@@ -10,7 +10,6 @@ export default ({ data }) => {
 
 	const videoMeta = frontmatter.meta.split("|").map(meta => meta.split(","))
 	videoMeta.push(["Posted", frontmatter.date])
-
 	return (
 		<Layout>
 			<SEO

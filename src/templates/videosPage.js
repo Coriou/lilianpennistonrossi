@@ -12,7 +12,7 @@ import Layout from "../templates/layout"
 import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
 
-const VideoPages = ({ data, pageContext }) => {
+const VideosPages = ({ data, pageContext }) => {
 	const {
 		allMarkdownRemark: { edges },
 	} = data
@@ -111,12 +111,13 @@ const VideoPages = ({ data, pageContext }) => {
 	)
 }
 
-export default VideoPages
+export default VideosPages
 
 export const pageQuery = graphql`
 	query($skip: Int!, $limit: Int!) {
 		allMarkdownRemark(
 			sort: { order: DESC, fields: [frontmatter___date] }
+			filter: { fileAbsolutePath: { regex: "/^(?!.*playlists).*$/i" } }
 			limit: $limit
 			skip: $skip
 		) {

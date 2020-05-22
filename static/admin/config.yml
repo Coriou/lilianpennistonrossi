@@ -42,4 +42,27 @@ collections:
           widget: "string",
           required: false,
         }
+      - {
+          name: playlist,
+          label: "Playlist",
+          widget: "relation",
+          collection: "playlists",
+          searchFields: ["title"],
+          valueField: "path",
+          displayFields: ["title"],
+          required: false,
+        }
+      - { name: body, label: "Body", widget: "markdown" }
+  - name: playlists
+    label: Playlists
+    folder: content/playlists
+    preview_path: "p/{{path}}"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: "Title", widget: "string" }
+      - { name: path, label: "Path", widget: "string" }
+      - { name: date, label: "Date", widget: datetime }
+      - { name: featuredImage, label: "Image", widget: "string" }
       - { name: body, label: "Body", widget: "markdown", required: false }
