@@ -101,7 +101,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 			path: node.frontmatter.path,
 			component: playlistPage,
 			context: {
-				path: node.frontmatter.path,
+				playlistPath: node.frontmatter.path,
 			},
 		})
 	})

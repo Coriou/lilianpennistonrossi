@@ -166,10 +166,10 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-	query($path: String!) {
+	query($playlistPath: String!) {
 		videos: allMarkdownRemark(
 			sort: { order: DESC, fields: [frontmatter___date] }
-			filter: { frontmatter: { playlist: { eq: $path } } }
+			filter: { frontmatter: { playlist: { eq: $playlistPath } } }
 		) {
 			edges {
 				node {
@@ -200,7 +200,7 @@ export const pageQuery = graphql`
 		}
 
 		playlist: allMarkdownRemark(
-			filter: { frontmatter: { path: { eq: $path } } }
+			filter: { frontmatter: { path: { eq: $playlistPath } } }
 		) {
 			edges {
 				node {
