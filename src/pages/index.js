@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
 				</MDXProvider>
 			</article>
 
-			<Row>
+			<Row className="mb-4">
 				<Col
 					xs={12}
 					sm={6}

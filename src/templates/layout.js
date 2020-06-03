@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Container } from "reactstrap"
 
 import Header from "../components/header"
+import Footer from "../components/footer"
 
 import "../styles/index.scss"
 
@@ -19,12 +20,13 @@ const Layout = ({ children }) => {
 	`)
 
 	return (
-		<>
+		<div id="app-wrapper">
 			<Header siteTitle={data.site.siteMetadata.title} />
-			<Container>
+			<Container id="main-content">
 				<main>{children}</main>
 			</Container>
-		</>
+			<Footer />
+		</div>
 	)
 }
 
