@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Col, Row } from "reactstrap"
-import { FiGithub } from "react-icons/fi"
+// import { FiGithub } from "react-icons/fi"
 import { BsShieldLock } from "react-icons/bs"
 
 export default () => {
@@ -8,14 +8,14 @@ export default () => {
 		<footer className="footer">
 			<Container>
 				<Row>
-					<Col xs={10}>
+					<Col xs={12}>
 						<ul className="list-inline mb-0">
 							<li className="list-inline-item">
 								<BsShieldLock /> We <i>do not</i> use cookies to track you
 							</li>
 						</ul>
 					</Col>
-					<Col xs={2} className="text-right">
+					{/* <Col xs={2} className="text-right">
 						<a
 							href="https://github.com/Coriou/lilianpennistonrossi"
 							target="_blank"
@@ -26,7 +26,7 @@ export default () => {
 						>
 							<FiGithub />
 						</a>
-					</Col>
+					</Col> */}
 				</Row>
 			</Container>
 		</footer>
