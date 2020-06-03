@@ -1,0 +1,7 @@
+body.dark {
+	input[type="text"] {
+		border-color: $border-color-dark;
+		background-color: $theme-toggle-dark-bg;
+		color: #fff;
+	}
+}

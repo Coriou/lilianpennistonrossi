@@ -11,6 +11,7 @@ import {
 import Layout from "../templates/layout"
 import SEO from "../components/seo"
 import VideoWrapper from "../components/videoWrapper"
+import Search from "../components/search"
 
 const VideosPages = ({ data, pageContext }) => {
 	const {
@@ -103,6 +104,9 @@ const VideosPages = ({ data, pageContext }) => {
 	return (
 		<Layout>
 			<SEO title="Videos" description="Some videos of me playing the piano" />
+			<Row>
+				<Search />
+			</Row>
 			<Row>
 				<Videos />
 			</Row>
