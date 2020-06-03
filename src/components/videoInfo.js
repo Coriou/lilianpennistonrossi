@@ -21,7 +21,9 @@ export default ({
 	path,
 	playlistComponent,
 }) => {
-	const displaySidebar = !preview && partition
+	// const displaySidebar = !preview && partition
+	// hiding sidebar, keeping it in place as it might come in handy sometime soon
+	const displaySidebar = false
 
 	return (
 		<div className="video-details d-flex flex-column flex-grow-1">
@@ -54,9 +56,9 @@ export default ({
 						preview={preview}
 					/>
 				</Col>
-				<Col md={displaySidebar ? (playlistComponent ? 4 : 3) : 0}>
+				{/* <Col md={displaySidebar ? (playlistComponent ? 4 : 3) : 0}>
 					<Partition partition={partition} title={title} />
-				</Col>
+				</Col> */}
 			</Row>
 
 			{preview && (
