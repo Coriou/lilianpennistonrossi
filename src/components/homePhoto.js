@@ -13,7 +13,7 @@ export default () => {
 						node {
 							photo: childImageSharp {
 								fluid(maxWidth: 874, quality: 100) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 						}

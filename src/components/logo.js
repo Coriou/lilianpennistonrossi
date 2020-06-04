@@ -20,12 +20,12 @@ export default () => {
 						node {
 							long: childImageSharp {
 								fixed(width: 572, height: 52, quality: 100) {
-									...GatsbyImageSharpFixed
+									...GatsbyImageSharpFixed_withWebp
 								}
 							}
 							small: childImageSharp {
 								fixed(width: 200, height: 52, quality: 100) {
-									...GatsbyImageSharpFixed
+									...GatsbyImageSharpFixed_withWebp
 								}
 							}
 						}

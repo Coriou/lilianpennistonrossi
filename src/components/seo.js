@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, title, metaImage = false, videoID }) {
 						node {
 							social: childImageSharp {
 								fixed(width: 1200, height: 628, quality: 100) {
-									...GatsbyImageSharpFixed
+									...GatsbyImageSharpFixed_withWebp
 								}
 							}
 						}

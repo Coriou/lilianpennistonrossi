@@ -64,12 +64,12 @@ export const pageQuery = graphql`
 				featuredImage {
 					social: childImageSharp {
 						fixed(width: 1200, height: 628, quality: 95) {
-							...GatsbyImageSharpFixed
+							...GatsbyImageSharpFixed_withWebp
 						}
 					}
 					cover: childImageSharp {
 						fluid(maxWidth: 3840, quality: 90) {
-							...GatsbyImageSharpFluid
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}

@@ -188,7 +188,7 @@ export const pageQuery = graphql`
 						featuredImage {
 							cover: childImageSharp {
 								fluid(maxWidth: 3840, quality: 90) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 						}
@@ -212,12 +212,12 @@ export const pageQuery = graphql`
 						featuredImage {
 							cover: childImageSharp {
 								fluid(maxWidth: 3840, quality: 90) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 							social: childImageSharp {
 								fixed(width: 1200, height: 628, quality: 100) {
-									...GatsbyImageSharpFixed
+									...GatsbyImageSharpFixed_withWebp
 								}
 							}
 						}
