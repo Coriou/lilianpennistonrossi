@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO title="Welcome" />
 
 			<article className="mt-4">
 				<MDXProvider className="mt-4">
