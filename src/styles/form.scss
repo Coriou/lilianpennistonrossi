@@ -1,6 +1,20 @@
+input[type="text"] {
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.input-group-text {
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
 body.dark {
 	input[type="text"] {
 		border-color: $border-color-dark;
+		background-color: $theme-toggle-dark-bg;
+		color: #fff;
+	}
+
+	.input-group-text {
+		border-color: $border-color-dark;
+		border-left: 1px solid $border-color-dark;
 		background-color: $theme-toggle-dark-bg;
 		color: #fff;
 	}

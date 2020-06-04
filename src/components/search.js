@@ -1,8 +1,17 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import * as JsSearch from "js-search"
-import { Container, Row, Col, Input } from "reactstrap"
-import { debounce } from "../utils"
+import {
+	Container,
+	Row,
+	Col,
+	Input,
+	InputGroup,
+	InputGroupAddon,
+	InputGroupText,
+} from "reactstrap"
+import { AiOutlineSearch } from "react-icons/ai"
+import { debounce, accentLess, trimLength } from "../utils"
 
 export default () => {
 	const {
@@ -36,35 +45,19 @@ export default () => {
 
 	// Search results component
 	const SearchResults = ({ results }) => {
-		const trimClean = (str, maxLength = 100) => {
-			var trimmedString = ""
-			if (str.length > trimmedString.length) {
-				trimmedString = str.substr(0, maxLength)
-				trimmedString = trimmedString.substr(
-					0,
-					Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))
-				)
-				if (str.length > trimmedString.length)
-					trimmedString = `${trimmedString} ...`
-			}
-
-			return trimmedString
-		}
-
 		const SearchResult = ({ result }) => {
 			return (
-				<div
+				<Link
+					to={result.path}
 					key={JSON.stringify(result.title)}
 					className="search-result d-flex align-items-center p-2"
 				>
 					<div>
-						<Link to={result.path}>
-							<h6 className="mb-0 text-primary">{result.title}</h6>
-						</Link>
+						<h6 className="mb-0 text-primary">{result.title}</h6>
 						<b className="text-muted">{result.author}</b>
-						<p className="mb-0 pb-0">{trimClean(result.excerpt)}</p>
+						<p className="mb-0 pb-0">{trimLength(result.excerpt, 130)}</p>
 					</div>
-				</div>
+				</Link>
 			)
 		}
 
@@ -93,11 +86,8 @@ export default () => {
 				// Removal of accentuated characters when tokenizing
 				s.current.tokenizer = {
 					tokenize(text) {
-						try {
-							text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-						} catch (e) {
-							console.error(e)
-						}
+						// Remove accents
+						text = accentLess(text)
 
 						// Using built-in simple tokenizer, don't think I need anything better right now
 						const { tokenize } = new JsSearch.SimpleTokenizer()
@@ -122,11 +112,19 @@ export default () => {
 			<Row>
 				<Col>
 					<div className="search-wrapper mt-4 w-100 position-relative">
-						<Input
-							disabled={!isReady}
-							placeholder="Type to search"
-							onChange={e => search(e.target.value)}
-						/>
+						<InputGroup>
+							<Input
+								disabled={!isReady}
+								placeholder="Type to search a video"
+								onChange={e => search(e.target.value)}
+							/>
+							<InputGroupAddon addonType="append">
+								<InputGroupText>
+									<AiOutlineSearch />
+								</InputGroupText>
+							</InputGroupAddon>
+						</InputGroup>
+
 						<SearchResults results={results} />
 					</div>
 				</Col>

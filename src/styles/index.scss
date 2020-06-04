@@ -11,6 +11,7 @@
 @import "modal";
 @import "playlist";
 @import "form";
+@import "search";
 
 body,
 nav,
@@ -124,30 +125,4 @@ body.dark {
 .footer {
 	flex-shrink: none;
 	font-size: 0.8rem;
-}
-
-.search-result {
-	background-color: $theme-toggle-light-bg;
-	border-top: 1px solid $border-color;
-	border-left: 1px solid $border-color;
-	border-right: 1px solid $border-color;
-
-	&:first-child {
-		border-top: 0;
-	}
-
-	&:last-child {
-		border-bottom: 1px solid $border-color;
-	}
-}
-
-.search-wrapper {
-	z-index: 10;
-}
-
-body.dark {
-	.search-result {
-		background-color: $theme-toggle-dark-bg;
-		border-color: $border-color-dark;
-	}
 }

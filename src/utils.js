@@ -91,3 +91,29 @@ export const debounce = (func, wait, immediate) => {
 		if (callNow) func.apply(context, args)
 	}
 }
+
+export const accentLess = str => {
+	try {
+		return String(str)
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "")
+	} catch (error) {
+		console.error(error)
+		return str
+	}
+}
+
+export const trimLength = (str, maxLength = 100) => {
+	var trimmedString = ""
+	if (str.length > trimmedString.length) {
+		trimmedString = str.substr(0, maxLength)
+		trimmedString = trimmedString.substr(
+			0,
+			Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))
+		)
+		if (str.length > trimmedString.length)
+			trimmedString = `${trimmedString} ...`
+	}
+
+	return trimmedString
+}
