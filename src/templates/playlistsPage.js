@@ -31,9 +31,14 @@ const PlaylistsPage = ({ data, pageContext }) => {
 
 			const { path, title } = frontmatter
 
-			videos = videos
-				.map(e => e.node)
-				.filter(v => v.frontmatter.playlist === path)
+			try {
+				videos = videos
+					.filter(v => typeof v !== "undefined")
+					.map(e => e.node)
+					.filter(v => v && v.frontmatter.playlist === path)
+			} catch (error) {
+				console.error(error)
+			}
 
 			const featuredAuthors = Array.from([
 				...new Set(videos.map((v, i) => v.frontmatter.author)),
@@ -65,13 +70,8 @@ const PlaylistsPage = ({ data, pageContext }) => {
 			}
 
 			return (
-				<Row key={i} className="mt-4">
-					<Col
-						xs={12}
-						lg={12}
-						key={i}
-						className="d-flex flex-column flex-grow-1"
-					>
+				<Row key={`${title}_${i}`} className="mt-4">
+					<Col xs={12} lg={12} className="d-flex flex-column flex-grow-1">
 						<Cover />
 						<Row className="d-flex">
 							<Col>
@@ -91,14 +91,16 @@ const PlaylistsPage = ({ data, pageContext }) => {
 					<Col>
 						<p>
 							{videoCount} tracks featuring pieces by{" "}
-							{featuredAuthors.slice(0, featuredAuthorsToDisplay).map(a => (
-								<>
-									<b>
-										<i>{a}</i>
-									</b>
-									,{" "}
-								</>
-							))}{" "}
+							{featuredAuthors
+								.slice(0, featuredAuthorsToDisplay)
+								.map((a, i1) => (
+									<span key={i1}>
+										<b>
+											<i>{a}</i>
+										</b>
+										,{" "}
+									</span>
+								))}{" "}
 							{featuredAuthors.length - featuredAuthorsToDisplay > 0 && (
 								<span>
 									and {featuredAuthors.length - featuredAuthorsToDisplay} more
